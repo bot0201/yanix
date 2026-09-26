@@ -5,3 +5,6 @@
 
 # SBM 雪球分发与菜单处理
 function sbm:tick
+
+# 手榴弹物理引擎
+function pve:grenade/tick

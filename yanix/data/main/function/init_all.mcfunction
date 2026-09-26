@@ -7,7 +7,7 @@ gamerule respawn_radius 0
 scoreboard objectives add tmp dummy
 
 # 显示版本信息
-function main:ver {"ver":"6.20.39"}
+function main:ver {"ver":"6.21.39"}
 
 # 调用各个模块的初始化函数
 function main:lib/init

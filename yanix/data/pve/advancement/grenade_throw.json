@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "throw": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:fishing_rod",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "grenade": 1
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pve:grenade/start"
+    }
+}

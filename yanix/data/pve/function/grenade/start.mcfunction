@@ -5,7 +5,7 @@ tag @s add grenade_thrower
 # 2. 清除鱼钩浮标
 execute \
     at @s \
-    as @e[type=fishing_hook,distance=..5,limit=1,sort=nearest] \
+    as @e[type=fishing_bobber,distance=..5,limit=1,sort=nearest] \
     run kill @s
 
 # 3. 获取玩家眼睛坐标（×100）
@@ -65,16 +65,13 @@ scoreboard players operation #vz grenade_math /= #100 grenade_math
 # 8. 向上初速加成
 scoreboard players operation #vy grenade_math += #boost grenade_math
 
-# 9. 首 tick 重力
-scoreboard players operation #vy grenade_math -= #gravity grenade_math
-
-# 10. 在玩家眼睛处生成手榴弹实体
+# 9. 在玩家眼睛处生成手榴弹实体
 execute \
     at @a[tag=grenade_thrower] \
     anchored eyes \
     run summon marker ~ ~ ~ {Tags:["grenade"],NoGravity:1b}
 
-# 11. 将速度存入手榴弹实体
+# 10. 将速度存入手榴弹实体
 execute \
     at @a[tag=grenade_thrower] \
     as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
@@ -92,6 +89,6 @@ execute \
     as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
     run scoreboard players set @s grenade_life 0
 
-# 12. 清理
+# 11. 清理
 kill @e[tag=grenade_tmp]
 tag @a[tag=grenade_thrower] remove grenade_thrower

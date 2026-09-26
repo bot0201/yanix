@@ -10,3 +10,4 @@ scoreboard objectives add grenade_math dummy
 
 function pve:gun/init
 function pve:gun/attach/init
+function pve:grenade/init
