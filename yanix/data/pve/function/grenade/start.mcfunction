@@ -1,51 +1,97 @@
-# 1. 玩家视角坐标，并存入计分板（放大100倍，即乘以100）
-execute \
-    as @s \
-    run function main:lib/tools/get_pos_eye
+# 由 grenade_throw 成就触发，@s = 投掷玩家
+# 1. 标记玩家以便后续引用
+tag @s add grenade_thrower
 
-# 2. 在视线前方1格处召唤一个隐形的计算标记（用盔甲架最稳）
+# 2. 清除鱼钩浮标
 execute \
-    at @s anchored eyes \
+    at @s \
+    as @e[type=fishing_hook,distance=..5,limit=1,sort=nearest] \
+    run kill @s
+
+# 3. 获取玩家眼睛坐标（×100）
+execute \
+    at @a[tag=grenade_thrower] \
+    anchored eyes \
+    store result score #eye_x grenade_math \
+    run data get entity @s Pos[0] 100
+execute \
+    at @a[tag=grenade_thrower] \
+    anchored eyes \
+    store result score #eye_y grenade_math \
+    run data get entity @s Pos[1] 100
+execute \
+    at @a[tag=grenade_thrower] \
+    anchored eyes \
+    store result score #eye_z grenade_math \
+    run data get entity @s Pos[2] 100
+
+# 4. 在视线前方 1 格处召唤方向标记
+execute \
+    at @a[tag=grenade_thrower] \
+    anchored eyes \
     positioned ^ ^ ^1 \
-    run summon minecraft:marker ~ ~ ~ {\
-        Tags:["grenade_vector_marker"],\
-        NoGravity:1b\
-    }
+    run summon marker ~ ~ ~ {Tags:["grenade_tmp"],NoGravity:1b}
 
-# 3. 获取该标记的坐标，存入计分板（同样放大100倍）
+# 5. 获取方向标记坐标（×100）
 execute \
-    as @e[tag=grenade_vector_marker,limit=1] \
+    as @e[tag=grenade_tmp,limit=1] \
     store result score #tgt_x grenade_math \
     run data get entity @s Pos[0] 100
 execute \
-    as @e[tag=grenade_vector_marker,limit=1] \
+    as @e[tag=grenade_tmp,limit=1] \
     store result score #tgt_y grenade_math \
     run data get entity @s Pos[1] 100
 execute \
-    as @e[tag=grenade_vector_marker,limit=1] \
+    as @e[tag=grenade_tmp,limit=1] \
     store result score #tgt_z grenade_math \
     run data get entity @s Pos[2] 100
 
-# 4. 计算初始速度向量 (目标坐标 - 视线坐标)
-scoreboard players operation #dx_speed grenade_math = #tgt_x grenade_math
-scoreboard players operation #dx_speed grenade_math -= #eye_x grenade_math
+# 6. 速度向量 = 目标 - 眼睛
+scoreboard players operation #vx grenade_math = #tgt_x grenade_math
+scoreboard players operation #vx grenade_math -= #eye_x grenade_math
+scoreboard players operation #vy grenade_math = #tgt_y grenade_math
+scoreboard players operation #vy grenade_math -= #eye_y grenade_math
+scoreboard players operation #vz grenade_math = #tgt_z grenade_math
+scoreboard players operation #vz grenade_math -= #eye_z grenade_math
 
-scoreboard players operation #dy_speed grenade_math = #tgt_y grenade_math
-scoreboard players operation #dy_speed grenade_math -= #eye_y grenade_math
+# 7. 乘以初速倍率（v *= speed / 100）
+scoreboard players operation #vx grenade_math *= #speed grenade_math
+scoreboard players operation #vy grenade_math *= #speed grenade_math
+scoreboard players operation #vz grenade_math *= #speed grenade_math
+scoreboard players operation #vx grenade_math /= #100 grenade_math
+scoreboard players operation #vy grenade_math /= #100 grenade_math
+scoreboard players operation #vz grenade_math /= #100 grenade_math
 
-scoreboard players operation #dz_speed grenade_math = #tgt_z grenade_math
-scoreboard players operation #dz_speed grenade_math -= #eye_z grenade_math
+# 8. 向上初速加成
+scoreboard players operation #vy grenade_math += #boost grenade_math
 
-# 5. 此时 #dx_speed 等大约是 ±100 之间的数（代表1格）。乘以初速度倍率（例如5m/s对应0.25格/tick，即25/100）
-scoreboard players operation #dx_speed grenade_math *= #25 grenade_math
-scoreboard players operation #dy_speed grenade_math *= #25 grenade_math
-scoreboard players operation #dz_speed grenade_math *= #25 grenade_math
-scoreboard players operation #dx_speed grenade_math /= #100 grenade_math
-scoreboard players operation #dy_speed grenade_math /= #100 grenade_math
-scoreboard players operation #dz_speed grenade_math /= #100 grenade_math
+# 9. 首 tick 重力
+scoreboard players operation #vy grenade_math -= #gravity grenade_math
 
-# 6. 重力加速度 (0.08 * 100 = 8)
-scoreboard players remove #dy_speed grenade_math 8
+# 10. 在玩家眼睛处生成手榴弹实体
+execute \
+    at @a[tag=grenade_thrower] \
+    anchored eyes \
+    run summon marker ~ ~ ~ {Tags:["grenade"],NoGravity:1b}
 
-# 7. 清理临时标记
-kill @e[tag=grenade_vector_marker]
+# 11. 将速度存入手榴弹实体
+execute \
+    at @a[tag=grenade_thrower] \
+    as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
+    run scoreboard players operation @s grenade_vx = #vx grenade_math
+execute \
+    at @a[tag=grenade_thrower] \
+    as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
+    run scoreboard players operation @s grenade_vy = #vy grenade_math
+execute \
+    at @a[tag=grenade_thrower] \
+    as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
+    run scoreboard players operation @s grenade_vz = #vz grenade_math
+execute \
+    at @a[tag=grenade_thrower] \
+    as @e[tag=grenade,distance=..2,sort=nearest,limit=1] \
+    run scoreboard players set @s grenade_life 0
+
+# 12. 清理
+kill @e[tag=grenade_tmp]
+tag @a[tag=grenade_thrower] remove grenade_thrower
