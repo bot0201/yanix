@@ -5,7 +5,7 @@
 
 [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21.11-blue.svg)](https://minecraft.net)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Size](https://img.shields.io/badge/Size-157%20KB-success.svg)]()
+[![Size](https://img.shields.io/badge/Size-192%20KB-success.svg)]()
 [![Download](https://img.shields.io/badge/Download-blue)](https://github.com/bot0201/releases)
 [![GitHub Stars](https://img.shields.io/github/stars/bot0201/yanix_datapack?style=for-the-badge&logo=github&label=Stars&color=yellow)]()
 
@@ -15,7 +15,7 @@
 
 *My friend spent 1 CNY to rent a Minecraft server on simpfun.cn for me. Because of my poor network connection, I couldn't download some plugins. Therefore, I decided to build everything using pure vanilla data packs.*
 
-经过数周的开发与**极度严苛的性能优化**，整个数据包的体积从最初的 736 KB（包含大量穷举坐标）极致瘦身到了 **约150 KB**，且实现了零卡顿运行。*After weeks of development and rigorous performance optimization, the data pack was reduced from 736 KB to about 150 KB, running smoothly without lag.*
+经过数周的开发与**极度严苛的性能优化**，整个数据包的体积从最初的 736 KB（包含大量穷举坐标）极致瘦身到了 **约150 KB** (现在增加的新功能又增加了体积)，且实现了零卡顿运行。*After weeks of development and rigorous performance optimization, the data pack was reduced from 736 KB to about 150 KB (nowadays, new functions improves the size again), running smoothly without lag.*
 
 ---
 
@@ -38,11 +38,11 @@
 *   **枪型路由系统**：枪械逻辑按 `m4a1` / `m1014` / `awm` 分文件夹独立管理，道具使用 `custom_data` 区分。
 
 ## 📋 前置依赖 / Dependencies
-- 需要服务端安装 [Multiverse-Core](https://www.spigotmc.org/resources/multiverse-core.64450) 插件（用于 `mining_adventure` 模式地皮与PVE地图）。
+- 需要服务端安装 [Multiverse-Core](https://www.spigotmc.org/resources/multiverse-core.64450) 插件（用于 `mining_adventure` 模式地皮与PVE等地图）。
 
 ### 🏆 其他游戏模式 (Other Game Modes)
 *   **模拟经营（mining_adventure）**：基于 `uid` 计分板（可以在reg函数中进行注册，与AuthMe插件完全没有关系），实现“每人一世界”的专属矿区/领地生成。
 *   **职业战争（kit_battle）**：包含职业系统、进度系统（如“颗秒！”）、自定义武器（秒人斧、珍珠弓）。
-*   **PVE 波次与 Boss 系统**：包含15波（高血量白板Boss）、25波（自带抗性4的折磨Boss）等关卡设计。
+*   **PVE 波次与 Boss 系统**：包含15波（高血量白板Boss）、25波（自带抗性3的折磨Boss）等关卡设计。
 *   **自定义成就**：如“老吃家”、“中国人能飞×2”等原版进度扩展。
 *   **雪球菜单（sbm实际上是SnowBallMenu的三个大写字母）**：纯数据包驱动的悬浮交互菜单。
