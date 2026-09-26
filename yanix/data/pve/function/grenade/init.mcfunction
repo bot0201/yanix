@@ -5,7 +5,7 @@ scoreboard objectives add grenade_life dummy
 
 # 常数（放大 100 倍）
 # 初速倍率：0.60 格/tick = 12 格/秒
-scoreboard players set #speed grenade_math 60
+scoreboard players set #speed grenade_math 25
 # 重力加速度：0.04 格/tick²
 scoreboard players set #gravity grenade_math 4
 # 向上初速加成：0.25 格/tick（保证平视也能投出弧线）
