@@ -20,5 +20,5 @@ execute \
 
 scoreboard players remove #summon_zombie recursion_running_count 1
 execute \
-    unless score #summon recursion_running_count matches ..0 \
+    unless score #summon_zombie recursion_running_count matches ..0 \
     run function pve:spawn/bosses/dr_zomboss_1st_generation_mech/start

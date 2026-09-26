@@ -1,0 +1,2 @@
+function pve:spawn/bosses/dr_zomboss_2nd_generation_mech/spawn
+scoreboard players set #summon_zombie recursion_running_count 0
