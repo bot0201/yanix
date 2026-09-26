@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Size](https://img.shields.io/badge/Size-192%20KB-success.svg)]()
 [![Download](https://img.shields.io/badge/Download-blue)](https://github.com/bot0201/releases)
-[![GitHub Stars](https://img.shields.io/github/stars/bot0201/yanix_datapack?style=for-the-badge&logo=github&label=Stars&color=yellow)]()
+[![GitHub Stars](https://img.shields.io/github/stars/bot0201/yanix?style=for-the-badge&logo=github&label=Stars&color=yellow)]()
 
 ## 📖 项目简介 / Introduction
 
