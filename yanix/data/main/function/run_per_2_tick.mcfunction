@@ -99,6 +99,9 @@ execute \
 
 function pve:horde_going
 
+# Boss 死亡检测
+function pve:boss/death_check
+
 # 职业技能处理
 function job:main/tick
 
