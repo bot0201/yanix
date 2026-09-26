@@ -1,0 +1,2 @@
+execute as @p store result storage mining_adventure:chunk_data uid int 1 run scoreboard players get @s uid
+execute as @p run function mining_adventure:chunk/tp/tp_chunk with storage mining_adventure:chunk_data

@@ -1,0 +1,1 @@
+tag @s remove mysterious_goggles_on

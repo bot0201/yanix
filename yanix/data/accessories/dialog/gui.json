@@ -1,0 +1,63 @@
+{
+    "type": "multi_action",
+    "title": {
+        "text": "饰品菜单",
+        "color": "#4A90E2"
+    },
+    "actions": [
+        {
+            "label": [
+                {"text":"装备 宇航员头盔", "color":"#F5A623"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger astronaut_helmet_on set 1"
+            },
+            "width": 240,
+            "tooltip": "力量II + 抗性I"
+        },
+        {
+            "label": [
+                {"text":"卸下 宇航员头盔", "color":"#D0021B"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger astronaut_helmet_off set 1"
+            },
+            "width": 240,
+            "tooltip": "移除头盔效果"
+        },
+        {
+            "label": [
+                {"text":"装备 神秘护目镜", "color":"#7ED321"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger mysterious_goggles_on set 1"
+            },
+            "width": 240,
+            "tooltip": "夜视 + 20格内怪物发光"
+        },
+        {
+            "label": [
+                {"text":"卸下 神秘护目镜", "color":"#D0021B"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger mysterious_goggles_off set 1"
+            },
+            "width": 240,
+            "tooltip": "移除护目镜效果"
+        }
+    ],
+    "body": [],
+    "exit_action": {
+        "label": "关闭菜单",
+        "width": 240,
+        "tooltip": "返回上一级"
+    },
+    "can_close_with_escape": true,
+    "after_action": "close",
+    "external_title": "【饰品菜单】",
+    "columns": 1
+}

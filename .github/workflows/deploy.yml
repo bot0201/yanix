@@ -1,0 +1,44 @@
+name: Deploy Datapack to Server
+
+# 触发条件：当代码被 push 到 main 分支时执行
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+
+      - name: 部署至 SFTP 服务器
+        env:
+          FTP_HOST: ${{ secrets.SFTP_HOST }}
+          FTP_PORT: ${{ secrets.SFTP_PORT }}
+          FTP_USER: ${{ secrets.SFTP_USERNAME }}
+          FTP_PASS: ${{ secrets.SFTP_PASSWORD }}
+          # 服务器上的目标路径（需要确认服务器上数据包的位置，此时是 lobby/datapacks/）
+          REMOTE_PATH: "/lobby/datapacks/"
+          # 本地需要上传的文件夹
+          LOCAL_PATH: "./yanix"
+        run: |
+          echo "正在连接服务器 $FTP_HOST:$FTP_PORT..."
+          sudo apt-get install -y lftp
+          
+          # 使用 lftp 进行 SFTP 上传
+          lftp -c "
+            set sftp:auto-confirm yes;
+            set ssl:verify-certificate no;
+            open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST:$FTP_PORT;
+            mirror -R --delete --verbose $LOCAL_PATH $REMOTE_PATH/yanix;
+            quit;
+          "
+          echo "上传完成ovo！请去后台执行 /reload"
+
+      - name: 🔔 可选：通过 RCON 自动重载服务器
+        # 如果你装了 RCON 插件或面板支持 RCON，可以在这里加一个发送 /reload 的步骤
+        # 如果没有，手动去后台 /reload 即可，暂时留空
+        run: echo "如需自动 reload，可接入 RCON"

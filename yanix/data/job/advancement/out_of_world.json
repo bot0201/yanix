@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "one_shot":{
+            "trigger":"impossible"
+        }
+    },
+    "display": {
+        "frame":"goal",
+        "icon": {
+            "id": "elytra"
+        },
+        "description": "前面的区域以后再来探索吧",
+        "title": {
+            "text":"胆子真是肥嘟嘟的",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "advancement:one_shot"
+    },
+    "parent": "job:one_shot"
+}

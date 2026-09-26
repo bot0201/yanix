@@ -1,0 +1,51 @@
+{
+    "criteria": {
+        "one_shot":{
+            "trigger":"minecraft:player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                },
+                "killing_blow": {
+                    "source_entity": {
+                        "equipment": {
+                            "mainhand": {
+                                "items": "golden_axe",
+                                "components": {
+                                    "enchantments":{
+                                        "sharpness":114
+                                    },
+                                    "item_name": "秒人虎"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "display": {
+        "frame":"goal",
+        "icon": {
+            "id": "golden_axe",
+            "components": {
+                "enchantments":{
+                    "sharpness":114
+                },
+                "item_name": "秒人虎"
+            }
+        },
+        "description": "使用秒人虎秒杀一位玩家！",
+        "title": {
+            "text":"颗秒！",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "advancement:one_shot"
+    },
+    "parent": "job:one_shot"
+}

@@ -1,0 +1,1 @@
+give @s ender_eye[custom_data={gun:"awm"},item_name="AWM 狙击步枪"]

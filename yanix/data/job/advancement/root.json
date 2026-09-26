@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "root":{
+            "trigger":"impossible"
+        }
+    },
+    "display": {
+        "background": "job:advancement/gold_block",
+        "frame":"challenge",
+        "icon": {
+            "id": "minecraft:enchanted_golden_apple",
+            "components": {
+                "item_name": "Yanix"
+            }
+        },
+        "description": "这需要写什么介绍啊",
+        "title": {
+            "text":"Yanix",
+            "color": "green",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": false
+    }
+}

@@ -1,0 +1,1 @@
+tag @s remove astronaut_helmet_on

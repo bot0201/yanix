@@ -1,0 +1,5 @@
+scoreboard objectives add astronaut_helmet_on trigger
+scoreboard objectives add astronaut_helmet_off trigger
+
+scoreboard objectives add mysterious_goggles_on trigger
+scoreboard objectives add mysterious_goggles_off trigger

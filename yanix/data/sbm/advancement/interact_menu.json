@@ -1,0 +1,22 @@
+﻿{
+    "criteria": {
+        "interact": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": [
+                    {
+                        "condition": "minecraft:entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "entity_type": "minecraft:interaction",
+                            "nbt": "{Tags:[\"plg_menu\"]}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "sbm:interact"
+    }
+}

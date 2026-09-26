@@ -1,0 +1,91 @@
+{
+    "type": "multi_action",
+    "title": {
+        "text": "【职业战争-菜单】",
+        "color": "#4A90E2"
+    },
+    "actions": [
+        {
+            "label": [
+                {"text":"1. ","color":"#F5A623"},
+                {"text":"经典战士","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_classic_soldier set 1"
+            },
+            "width": 240,
+            "tooltip": "近战六边形战士，能抗能打"
+        },
+        {
+            "label": [
+                {"text":"2. ","color":"#F5A623"},
+                {"text":"弓箭手","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_archer set 1"
+            },
+            "width": 240,
+            "tooltip": "远程火力压制，箭雨专家"
+        },
+        {
+            "label": [
+                {"text":"3. ","color":"#F5A623"},
+                {"text":"法师","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_mage set 1"
+            },
+            "width": 240,
+            "tooltip": "移动炮台，药水与风弹的掌控者"
+        },
+        {
+            "label": [
+                {"text":"4. ","color":"#F5A623"},
+                {"text":"辅助","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_healer set 1"
+            },
+            "width": 240,
+            "tooltip": "团队的移动泉水，专职治疗与支援"
+        },
+        {
+            "label": [
+                {"text":"5. ","color":"#F5A623"},
+                {"text":"刺客","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_assassin set 1"
+            },
+            "width": 240,
+            "tooltip": "高机动性收割者，潜行与爆发兼备"
+        },
+        {
+            "label": [
+                {"text":"6. ","color":"#F5A623"},
+                {"text":"爆破手","color":"green"}
+            ],
+            "action": {
+                "type": "run_command",
+                "command": "trigger trigger_job_demolition set 1"
+            },
+            "width": 240,
+            "tooltip": "人形自走炮台，范围火力压制"
+        }
+    ],
+    "body": [],
+    "exit_action": {
+        "label": "关闭菜单",
+        "width": 240,
+        "tooltip": "返回上一级"
+    },
+    "can_close_with_escape": true,
+    "after_action": "close",
+    "external_title": "【职业战争-菜单】",
+    "columns": 1
+}

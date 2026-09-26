@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "description": "Yanix服务器的专属数据包",
+    "min_format": [
+      94,
+      1
+    ],
+    "max_format": 94
+  }
+}

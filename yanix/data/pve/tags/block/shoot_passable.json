@@ -1,0 +1,16 @@
+{
+    "values": [
+        "minecraft:air",
+        "minecraft:short_grass",
+        "minecraft:tall_grass",
+        "minecraft:water",
+        "minecraft:cave_air",
+        "minecraft:void_air",
+        "minecraft:light",
+        "minecraft:torch",
+        "minecraft:lantern",
+        "minecraft:wall_torch",
+        "#all_signs",
+        "#minecraft:all_hanging_signs"
+    ]
+}
