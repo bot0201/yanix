@@ -2,7 +2,6 @@ execute \
     store result score #pve random \
     run random value 1..359
 
-condition_loop:
 execute \
     if score #pve random matches ..349 \
     run tag @s add invalid
