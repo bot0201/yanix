@@ -3,10 +3,15 @@
 # 放置低频逻辑
 # ========================================
 
-# 箱子菜单刷新（静态内容，低频刷新即可）
+# 饰品商店箱子菜单刷新（静态内容，低频刷新即可）
 execute \
     if dimension minecraft:overworld \
-    run function chest_menu:-9_69_-9
+    run function accessories:shop/refresh
+
+# SBM 箱子菜单刷新
+execute \
+    if dimension minecraft:overworld \
+    run function sbm:chest/refresh
 
 # 成就授予
 function job:main/give_advancement

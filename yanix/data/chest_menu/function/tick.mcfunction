@@ -1,4 +1,2 @@
-execute \
-    as @a \
-    if dimension minecraft:overworld \
-    run function chest_menu:-9_69_-9
+# 饰品商店 - 箱子菜单 (取代原 -9_69_-9 直接调用)
+function accessories:shop/refresh

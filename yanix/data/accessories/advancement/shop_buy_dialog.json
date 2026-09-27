@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "buy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:writable_book",
+            "components": {
+              "minecraft:custom_data": {
+                "shop": "accessories",
+                "buy": "dialog"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "accessories:shop/buy_dialog"
+  }
+}

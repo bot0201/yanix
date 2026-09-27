@@ -3,8 +3,8 @@
 # 放置需要即时响应的逻辑
 # ========================================
 
-# SBM 雪球分发与菜单处理
-function sbm:tick
+# SBM 箱子菜单 - 点击检测
+function sbm:chest/scan
 
 # 手榴弹物理引擎
 function pve:grenade/tick

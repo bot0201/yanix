@@ -4,3 +4,6 @@
 scoreboard objectives add plg dummy
 scoreboard objectives add plg_interaction_time dummy
 scoreboard objectives add plg_menu_select dummy
+
+# SBM 箱子菜单页面切换
+scoreboard objectives add sbm_page dummy

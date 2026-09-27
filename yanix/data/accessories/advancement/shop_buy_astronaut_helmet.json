@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "buy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glass",
+            "components": {
+              "minecraft:custom_data": {
+                "shop": "accessories",
+                "buy": "astronaut_helmet"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "accessories:shop/buy_astronaut_helmet"
+  }
+}
