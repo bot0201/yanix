@@ -24,14 +24,6 @@ execute \
 
 execute \
     unless entity @s[tag=invalid] \
-    run summon warden ~ ~ ~ {\
-        CustomName:"僵王博士的第二代机甲",\
-        Tags:[\
-            "dr_zomboss_2nd_generation_mech"\
-        ]\
-    }
-
-effect give @n[tag=dr_zomboss_2nd_generation_mech] speed infinite 2 true
-effect give @n[tag=dr_zomboss_2nd_generation_mech] resistance infinite 3 true
+    run summon minecraft:zombie ~ ~ ~ {IsBaby:1b}
 
 kill @s

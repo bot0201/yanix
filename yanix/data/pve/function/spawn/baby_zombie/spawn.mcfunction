@@ -14,9 +14,9 @@ execute \
 
 execute \
     as @e[type=marker,tag=candidate] \
-    run function pve:spawn/zombie/child
+    run function pve:spawn/baby_zombie/child
 
-scoreboard players remove #summon_zombie recursion_running_count 1
+scoreboard players remove #summon_baby_zombie recursion_running_count 1
 execute \
-    unless score #summon_zombie recursion_running_count matches ..0 \
-    run function pve:spawn/zombie/spawn
+    unless score #summon_baby_zombie recursion_running_count matches ..0 \
+    run function pve:spawn/baby_zombie/spawn

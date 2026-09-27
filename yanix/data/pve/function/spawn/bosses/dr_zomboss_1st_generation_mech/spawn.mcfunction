@@ -9,8 +9,6 @@ execute \
     Tags:[\
         "candidate"\
     ],\
-    Invisible:1b,\
-    Marker:1b,\
     NoGravity:1b\
 }
 
