@@ -1,0 +1,6 @@
+Total elements: 1006
+
+Bad elements: 0
+Total number tokens: 31145
+Bool/null strings: 0
+Bare bool in arrays: 0
