@@ -13,16 +13,16 @@ execute \
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"page_menu1\
-        "\
-    }] \
+            sbm_action:"page_menu1"\
+        }\
+    ] \
     run return run function sbm:chest/action/page_menu1
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"page_menu2\
-        "\
-    }] \
+            sbm_action:"page_menu2"\
+        }\
+    ] \
     run return run function sbm:chest/action/page_menu2
 
 # ---- 关闭 ----
@@ -45,10 +45,10 @@ execute \
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_gold\
-        e\
-    n_\
-    apple"}] run return run function sbm:chest/action/give_golden_apple
+            sbm_action:"give_golden_apple"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_golden_apple
 execute \
     if items entity @s container.* *[\
         custom_data~{\
@@ -59,24 +59,24 @@ execute \
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_emer\
-        a\
-    ld\
-    "}] run return run function sbm:chest/action/give_emerald
+            sbm_action:"give_emerald"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_emerald
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_cow_\
-        e\
-    gg\
-    "}] run return run function sbm:chest/action/give_cow_egg
+            sbm_action:"give_cow_egg"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_cow_egg
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_ende\
-        r\
-    _p\
-    earl"}] run return run function sbm:chest/action/give_ender_pearl
+            sbm_action:"give_ender_pearl"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_ender_pearl
 
 # ---- 第1页功能 ----
 execute \
@@ -89,39 +89,45 @@ execute \
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_diamond_swor\
-        d\
-    "}\
-    ] run return run function sbm:chest/action/give_diamond_sword
+            sbm_action:"give_diamond_sword"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_diamond_sword
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_shield"}\
-        ] run return run function sbm:chest/action/give_shield
+            sbm_action:"give_shield"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_shield
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_bow"}\
-        ] run \
-        return run function sbm:chest/action/give_bow
+            sbm_action:"give_bow"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_bow
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_crossbow"}] \
-        run return run function sbm:chest/action/give_crossbow
+            sbm_action:"give_crossbow"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_crossbow
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_trident"}] r\
-        u\
-    n \
-    return run function sbm:chest/action/give_trident
+            sbm_action:"give_trident"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_trident
 execute \
     if items entity @s container.* *[\
         custom_data~{\
             sbm_action:"give_totem"\
         }\
-    ] run return run function sbm:chest/action/give_totem
+    ] \
+    run return run function sbm:chest/action/give_totem
 
 # ---- 第2页功能 ----
 execute \
@@ -129,11 +135,15 @@ execute \
         custom_data~{\
             sbm_action:"give_enchanted_golden_apple"\
         }\
-    ] run return run function sbm:chest/action/give_enchanted_golden_apple
+    ] \
+    run return run function sbm:chest/action/give_enchanted_golden_apple
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_elytra"}] run return run function sbm:chest/action/give_elytra
+            sbm_action:"give_elytra"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_elytra
 execute \
     if items entity @s container.* *[\
         custom_data~{\
@@ -146,22 +156,26 @@ execute \
         custom_data~{\
             sbm_action:"give_xp_bottle"\
         }\
-    ] run return run function sbm:chest/action/give_xp_bottle
+    ] \
+    run return run function sbm:chest/action/give_xp_bottle
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_ender_chest"}] run retu\
-        r\
-    n run function sbm:chest/action/give_ender_chest
+            sbm_action:"give_ender_chest"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_ender_chest
 execute \
     if items entity @s container.* *[\
         custom_data~{\
-            sbm_action:"give_crafting_table"}] run r\
-        e\
-    turn run function sbm:chest/action/give_crafting_table
+            sbm_action:"give_crafting_table"\
+        }\
+    ] \
+    run return run function sbm:chest/action/give_crafting_table
 execute \
     if items entity @s container.* *[\
         custom_data~{\
             sbm_action:"give_anvil"\
         }\
-    ] run return run function sbm:chest/action/give_anvil
+    ] \
+    run return run function sbm:chest/action/give_anvil
