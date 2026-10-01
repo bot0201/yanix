@@ -6,5 +6,8 @@
 # SBM 箱子菜单 - 点击检测
 function sbm:chest/scan
 
-# 手榴弹物理引擎
+# 破片手雷物理引擎
 function pve:grenade/tick
+
+# 磁吸炸弹物理引擎
+function pve:magnetic_bomb/tick

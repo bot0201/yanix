@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "throw": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:fishing_rod",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "magnetic_bomb": 1
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pve:magnetic_bomb/start"
+    }
+}

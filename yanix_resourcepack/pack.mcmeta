@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "description": "Yanix官方资源包，若不加载可能会使职业战争的某些物品材质、模型丢失(也就是紫黑方块)",
+        "pack_format": 75,
+        "supported_formats": [
+            75,
+            88
+        ],
+		"min_format": 75,
+        "max_format": 88
+    }
+}

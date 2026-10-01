@@ -69,7 +69,7 @@ scoreboard players operation #vy grenade_math += #boost grenade_math
 execute \
     at @a[tag=grenade_thrower] \
     anchored eyes \
-    run summon marker ~ ~ ~ {Tags:["grenade"],NoGravity:1b}
+    run summon marker ~ ~ ~ {Tags:["grenade","frag_grenade"],NoGravity:1b}
 
 # 10. 将速度存入手榴弹实体
 execute \

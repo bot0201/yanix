@@ -14,3 +14,4 @@ scoreboard objectives add boss1_check dummy
 function pve:gun/init
 function pve:gun/attach/init
 function pve:grenade/init
+function pve:magnetic_bomb/init
