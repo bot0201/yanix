@@ -13,8 +13,7 @@
                 "type": "run_command",
                 "command": "trigger astronaut_helmet_on set 1"
             },
-            "width": 240,
-            "tooltip": "力量II + 抗性I"
+            "width": 240
         },
         {
             "label": [
@@ -35,8 +34,7 @@
                 "type": "run_command",
                 "command": "trigger mysterious_goggles_on set 1"
             },
-            "width": 240,
-            "tooltip": "夜视 + 20格内怪物发光"
+            "width": 240
         },
         {
             "label": [
