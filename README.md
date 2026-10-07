@@ -5,7 +5,7 @@
 
 [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21.11-blue.svg)](https://minecraft.net)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Size](https://img.shields.io/badge/Size-192%20KB-success.svg)]()
+[![Size](https://img.shields.io/badge/Size-241%20KB-success.svg)]()
 [![GitHub Stars](https://img.shields.io/github/stars/bot0201/yanix?style=for-the-badge&logo=github&label=Stars&color=yellow)]()
 
 ## 📖 项目简介 / Introduction
