@@ -1,0 +1,10 @@
+{
+    "m4a1_shoot":{
+        "sounds": [
+            {
+                "name": "pve:m4a1_shoot",
+                "volume": 1
+            }
+        ]
+    }
+}
