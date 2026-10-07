@@ -2,6 +2,7 @@
 scoreboard objectives add recursion_running_count dummy
 scoreboard objectives add time dummy
 scoreboard objectives add attach_muzzle dummy
+scoreboard objectives add attach_scope dummy
 
 # M4A1
 scoreboard objectives add bullet_m4a1 dummy
