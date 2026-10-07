@@ -41,9 +41,9 @@ scoreboard players remove @s magazine_m4a1 1
 # 重置递归计数
 scoreboard players set @s recursion_running_count 0
 
-# ---- 播放射击音效（消音器使用更轻的音效） ----
+# ---- 播放射击音效 ----
 execute if score @s attach_muzzle matches 1 run playsound pve:m4a1_shoot player @s ~ ~ ~ 0.05 1.5
-execute unless score @s attach_muzzle matches 1 run playsound pve:m4a1_shoot player @s ~ ~ ~ 1 1
+execute unless score @s attach_muzzle matches 1 run playsound pve:m4a1_shoot_silence player @s ~ ~ ~ 1 1
 
 # 开始递归绘画子弹轨迹/伤害计算
 execute \
