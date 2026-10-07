@@ -42,20 +42,34 @@ execute \
     if score @s attach_mag matches 2 \
     run function pve:gun/m4a1/reloaded
 
-# PVE 换弹计时（M1014）
+# PVE 换弹计时（M1014 逐发装填）
 execute \
     as @a[tag=reloading_m1014] \
     run scoreboard players add @s time 1
+# 第一发（无快拔）
 execute \
-    as @a[tag=reloading_m1014] \
-    if score @s time matches 40 \
+    as @a[tag=reloading_m1014,tag=!m1014_reload_cycle] \
+    if score @s time matches 10.. \
     unless score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reloaded
+    run function pve:gun/m1014/reload_one_shell
+# 第一发（快拔）
 execute \
-    as @a[tag=reloading_m1014] \
-    if score @s time matches 28 \
+    as @a[tag=reloading_m1014,tag=!m1014_reload_cycle] \
+    if score @s time matches 7.. \
     if score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reloaded
+    run function pve:gun/m1014/reload_one_shell
+# 后续（无快拔）
+execute \
+    as @a[tag=reloading_m1014,tag=m1014_reload_cycle] \
+    if score @s time matches 6.. \
+    unless score @s attach_mag matches 2 \
+    run function pve:gun/m1014/reload_one_shell
+# 后续（快拔）
+execute \
+    as @a[tag=reloading_m1014,tag=m1014_reload_cycle] \
+    if score @s time matches 4.. \
+    if score @s attach_mag matches 2 \
+    run function pve:gun/m1014/reload_one_shell
 
 # PVE 换弹计时（AWM）
 execute \

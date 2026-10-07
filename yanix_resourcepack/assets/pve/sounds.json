@@ -14,5 +14,43 @@
                 "volume": 1
             }
         ]
+    },
+
+
+
+    "awm_shoot":{
+        "sounds": [
+            {
+                "name": "pve:awm_shoot",
+                "volume": 1
+            }
+        ]
+    },
+    "awm_shoot_silence":{
+        "sounds": [
+            {
+                "name": "pve:awm_shoot_silence",
+                "volume": 1
+            }
+        ]
+    },
+
+
+    
+    "m1014_shoot":{
+        "sounds": [
+            {
+                "name": "pve:m1014_shoot",
+                "volume": 1
+            }
+        ]
+    },
+    "m1014_shoot_silence":{
+        "sounds": [
+            {
+                "name": "pve:m1014_shoot_silence",
+                "volume": 1
+            }
+        ]
     }
 }

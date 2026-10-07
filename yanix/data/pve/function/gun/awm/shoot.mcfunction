@@ -41,8 +41,8 @@ scoreboard players remove @s magazine_awm 1
 scoreboard players set @s recursion_running_count 0
 
 # ---- 播放狙击音效（消音器使用更轻的音效） ----
-execute if score @s attach_muzzle matches 1 run playsound minecraft:entity.warden.sonic_boom player @s ~ ~ ~ 0.03 1.8
-execute unless score @s attach_muzzle matches 1 run playsound minecraft:entity.warden.sonic_boom player @s ~ ~ ~ 0.3 0.8
+execute if score @s attach_muzzle matches 1 run playsound pve:awm_shoot player @s ~ ~ ~ 0.03 1.8
+execute unless score @s attach_muzzle matches 1 run playsound pve:awm_shoot_silence player @s ~ ~ ~ 0.3 0.8
 
 # 射线（100 格射程）
 execute \

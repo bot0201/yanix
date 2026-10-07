@@ -9,6 +9,9 @@ execute \
     run tag @s remove reloading_m1014
 execute \
     as @a \
+    run tag @s remove m1014_reload_cycle
+execute \
+    as @a \
     run tag @s remove reloading_awm
 execute \
     as @a \

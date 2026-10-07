@@ -17,8 +17,8 @@ tag @s add shooting_m1014
 scoreboard players remove @s magazine_m1014 1
 
 # ---- 播放射击音效（消音器使用更轻的音效） ----
-execute if score @s attach_muzzle matches 1 run playsound minecraft:entity.warden.sonic_boom player @s ~ ~ ~ 0.05 1.5
-execute unless score @s attach_muzzle matches 1 run playsound minecraft:entity.generic.explode player @s ~ ~ ~ 0.5 0.8
+execute if score @s attach_muzzle matches 1 run playsound pve:m1014_shoot player @s ~ ~ ~ 0.05 1.5
+execute unless score @s attach_muzzle matches 1 run playsound pve:m1014_shoot_silence player @s ~ ~ ~ 0.5 0.8
 
 # 同时射出 8 颗弹丸
 scoreboard players set #m1014 pellet_m1014 8
