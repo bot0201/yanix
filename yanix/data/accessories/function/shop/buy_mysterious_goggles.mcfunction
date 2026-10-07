@@ -21,4 +21,4 @@ scoreboard players set @s owns_mysterious_goggles 1
 tellraw @s [{"text":"购买成功！","color":"green"},{"text":" 你获得了 ","color":"white"},{"text":"神秘眼镜","color":"dark_purple"}]
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1
 
-advancement revoke @s only accessories:shop/buy_mysterious_goggles
+advancement revoke @s only accessories:shop_buy_mysterious_goggles

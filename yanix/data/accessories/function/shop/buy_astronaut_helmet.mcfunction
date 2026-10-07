@@ -29,4 +29,4 @@ scoreboard players set @s owns_astronaut_helmet 1
 tellraw @s [{"text":"购买成功！","color":"green"},{"text":" 你获得了 ","color":"white"},{"text":"宇航员头盔","color":"aqua"}]
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1
 
-advancement revoke @s only accessories:shop/buy_astronaut_helmet
+advancement revoke @s only accessories:shop_buy_astronaut_helmet
