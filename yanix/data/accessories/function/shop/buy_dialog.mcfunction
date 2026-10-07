@@ -7,4 +7,4 @@ clear @s minecraft:lead[minecraft:custom_data~{buy:"mysterious_goggles"}]
 # 打开对话式购买菜单
 function accessories:shop/dialog
 
-advancement revoke @s only accessories:shop/buy_dialog
+advancement revoke @s only accessories:shop_buy_dialog
