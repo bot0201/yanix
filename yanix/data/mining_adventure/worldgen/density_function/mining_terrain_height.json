@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:clamp",
+    "input": {
+        "type": "minecraft:add",
+        "argument1": {
+            "type": "minecraft:mul",
+            "argument1": {
+                "type": "minecraft:constant",
+                "argument": 22.5
+            },
+            "argument2": {
+                "type": "minecraft:noise",
+                "noise": "mining_adventure:mining_terrain",
+                "xz_scale": 0.25,
+                "y_scale": 0
+            }
+        },
+        "argument2": {
+            "type": "minecraft:constant",
+            "argument": -27.5
+        }
+    },
+    "min": -50,
+    "max": -5
+}

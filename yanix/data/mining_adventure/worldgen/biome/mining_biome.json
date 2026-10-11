@@ -1,0 +1,29 @@
+{
+    "has_precipitation": false,
+    "temperature": 0.5,
+    "downfall": 0,
+    "effects": {
+        "water_color": 0
+    },
+    "carvers": [],
+    "features": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+            "mining_adventure:ore_coal",
+            "mining_adventure:ore_iron",
+            "mining_adventure:ore_gold",
+            "mining_adventure:ore_diamond"
+        ],
+        [],
+        [],
+        [],
+        []
+    ],
+    "spawners": {},
+    "spawn_costs": {}
+}

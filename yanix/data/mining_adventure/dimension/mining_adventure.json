@@ -1,0 +1,11 @@
+{
+    "type": "mining_adventure:mining_adventure",
+    "generator": {
+        "type": "minecraft:noise",
+        "settings": "mining_adventure:mining",
+        "biome_source": {
+            "type": "minecraft:fixed",
+            "biome": "mining_adventure:mining_biome"
+        }
+    }
+}

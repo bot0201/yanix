@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:add",
+    "argument1": {
+        "type": "minecraft:constant",
+        "argument": -12
+    },
+    "argument2": {
+        "type": "minecraft:mul",
+        "argument1": {
+            "type": "minecraft:constant",
+            "argument": 12
+        },
+        "argument2": {
+            "type": "minecraft:abs",
+            "argument": {
+                "type": "minecraft:noise",
+                "noise": "mining_adventure:mining_rift",
+                "xz_scale": 0.08,
+                "y_scale": 0
+            }
+        }
+    }
+}

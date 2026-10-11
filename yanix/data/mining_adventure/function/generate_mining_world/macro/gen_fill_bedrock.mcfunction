@@ -1,1 +1,0 @@
-$fill $(x) -60 $(z) $(x) $(by) $(z) minecraft:bedrock

@@ -1,1 +1,0 @@
-$fill $(x) -55 $(z) $(x) -10 $(z) minecraft:air

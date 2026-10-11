@@ -1,0 +1,5 @@
+{
+    "type": "minecraft:add",
+    "argument1": "mining_adventure:mining_base_terrain",
+    "argument2": "mining_adventure:mining_rift_valley"
+}
