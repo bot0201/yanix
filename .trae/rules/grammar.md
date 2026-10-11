@@ -2,7 +2,6 @@
 alwaysApply: true
 ---
 这是一个Java版1.21.11的Minecraft服务器用数据包，依赖MV多世界插件，用于实现多个世界（不过官方来说是与主世界性质相同的多个维度）的功能，可以区分各个模式
-本文件的标题可能有点乱，因为都是照搬的wiki
 若你需要关于命令的更多详细信息，请参考[wiki](https://zh.minecraft.wiki/w/命令)
 当然，这里也给你一些关于数据包的专属链接
 + [Minecraft 数据包](https://zh.minecraft.wiki/w/数据包)
