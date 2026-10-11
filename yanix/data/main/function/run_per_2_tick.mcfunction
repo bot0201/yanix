@@ -4,7 +4,7 @@
 # ========================================
 
 # PVE 换弹检测（副手检查）
-function pve:gun/reload
+execute as @a run function pve:gun/reload
 
 # PVE 配件菜单 trigger 处理
 execute as @a[scores={pve_attach=1..}] run function pve:gun/attach/handler
