@@ -31,5 +31,5 @@
       "eat_golden_apple"
     ]
   ],
-  "parent": "minecraft:adventure/root"
+  "parent": "main:root"
 }

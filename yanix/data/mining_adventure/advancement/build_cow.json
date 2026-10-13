@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "build_cow": {
+            "trigger": "default_block_use",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "oak_button"
+                                ]
+                            },
+                            "position": {
+                                "x": 8.5,
+                                "y": 1.5,
+                                "z": 12.5
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "mining_adventure:build/default_house/build_cow"
+    }
+}

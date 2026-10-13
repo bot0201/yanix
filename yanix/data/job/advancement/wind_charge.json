@@ -14,7 +14,7 @@
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "minecraft:adventure/root",
+  "parent": "main:root",
   "criteria": {
     "use_wind_charge": {
       "trigger": "minecraft:fall_after_explosion",
@@ -33,7 +33,7 @@
           }
         },
         "cause": {
-          "type": "minecraft:player",
+          "entity_type": "minecraft:player",
           "nbt": "{SelectedItem:{id:'minecraft:wind_charge'}}"
         }
       }

@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "first_build": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame":"goal",
+        "icon": {
+            "id": "elytra"
+        },
+        "description": "迈出第一步",
+        "title": {
+            "text":"建造第一个建筑的一部分",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "mining_adventure:advancement/first_build"
+    },
+    "parent": "main:root"
+}
