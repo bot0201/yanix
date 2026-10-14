@@ -43,5 +43,8 @@
     [
       "use_wind_charge"
     ]
-  ]
+  ],
+  "rewards": {
+    "function": "job:advancement/wind_charge"
+  }
 }

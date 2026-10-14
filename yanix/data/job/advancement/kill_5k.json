@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "kill_5k": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "goal",
+        "icon": {
+            "id": "diamond_sword"
+        },
+        "description": "累计击杀5000名玩家",
+        "title": {
+            "text": "杀戮机器",
+            "color": "gold",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_5k"
+    },
+    "parent": "job:kill_1k"
+}

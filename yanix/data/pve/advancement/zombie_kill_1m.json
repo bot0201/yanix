@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "zombie_kill_1m": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "zombie_head",
+            "components": {
+                "enchantments": {
+                    "sharpness": 10
+                }
+            }
+        },
+        "description": "累计击杀1000000只僵尸",
+        "title": {
+            "text": "僵尸收割机",
+            "color": "dark_red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_1m"
+    },
+    "parent": "pve:zombie_kill_10k"
+}

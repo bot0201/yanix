@@ -37,7 +37,11 @@ execute \
     as @e[type=!player,type=!marker,type=!item,distance=10..15] \
     run damage @s 5 explosion
 
-# 4. 对附近玩家造成伤害
+# 4. 对附近玩家造成伤害（标记 + 伤害）
+execute \
+    at @s \
+    run tag @a[distance=..15] add pve_ff_hit
+
 execute \
     at @s \
     as @a[distance=..3] \
@@ -57,6 +61,16 @@ execute \
     at @s \
     as @a[distance=10..15] \
     run damage @s 5 explosion
+
+# 4.5 炸队友检测
+execute \
+    if entity @a[tag=pve_ff_hit,nbt={DeathTime:0s},distance=..15] \
+    at @s \
+    run advancement grant @a[tag=gaming_pve,nbt=!{DeathTime:0s},distance=..15] only pve:team_kill
+
+execute \
+    at @s \
+    run tag @a[tag=pve_ff_hit] remove pve_ff_hit
 
 # 5. 若吸附在敌人身上，杀死目标敌人（秒杀贴脸）
 execute \

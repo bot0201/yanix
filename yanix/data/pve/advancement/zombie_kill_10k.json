@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "zombie_kill_10k": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "zombie_head",
+            "components": {
+                "enchantments": {
+                    "sharpness": 5
+                }
+            }
+        },
+        "description": "累计击杀10000只僵尸",
+        "title": {
+            "text": "屠僵勇士",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_10k"
+    },
+    "parent": "pve:zombie_kill_5k"
+}

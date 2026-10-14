@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "kill_100": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "task",
+        "icon": {
+            "id": "iron_sword"
+        },
+        "description": "累计击杀100名玩家",
+        "title": {
+            "text": "百人斩",
+            "color": "yellow",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_100"
+    },
+    "parent": "job:kill_10"
+}

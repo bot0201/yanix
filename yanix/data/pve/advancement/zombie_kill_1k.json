@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "zombie_kill_1k": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "goal",
+        "icon": {
+            "id": "zombie_head",
+            "components": {
+                "enchantments": {
+                    "sharpness": 1
+                }
+            }
+        },
+        "description": "累计击杀1000只僵尸",
+        "title": {
+            "text": "僵尸天敌",
+            "color": "gold",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_1k"
+    },
+    "parent": "pve:zombie_kill_100"
+}

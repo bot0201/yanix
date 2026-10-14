@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "zombie_kill_100": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "task",
+        "icon": {
+            "id": "zombie_head"
+        },
+        "description": "累计击杀100只僵尸",
+        "title": {
+            "text": "灭僵大师",
+            "color": "yellow",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_100"
+    },
+    "parent": "pve:zombie_kill_50"
+}

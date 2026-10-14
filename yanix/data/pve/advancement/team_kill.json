@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "team_kill": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "goal",
+        "icon": {
+            "id": "tnt"
+        },
+        "description": "不是怎么老贝榨呀",
+        "title": {
+            "text": "榨兑油",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/team_kill"
+    },
+    "parent": "pve:root"
+}

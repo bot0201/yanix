@@ -61,3 +61,6 @@ execute \
         ] \
         at @s if dimension minecraft:kitbattle \
         run function job:main/out_of_world_child
+
+# 累计击杀成就检查
+function job:advancement/check_kills

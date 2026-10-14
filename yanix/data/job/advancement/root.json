@@ -1,0 +1,14 @@
+{
+    "criteria": {
+        "job:root": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "title": "职业战争系列成就",
+        "description": "职业战争系列成就",
+        "icon": "iron_sword",
+        "frame": "task"
+    },
+    "parent": "main:root"
+}

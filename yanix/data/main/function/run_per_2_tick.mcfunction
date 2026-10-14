@@ -119,6 +119,9 @@ function pve:boss/death_check
 # 职业技能处理
 function job:main/tick
 
+# PVE 累计击杀成就检查
+function pve:advancement/check_zombie_kills
+
 # 饰品 trigger 处理
 function accessories:trigger_handler
 

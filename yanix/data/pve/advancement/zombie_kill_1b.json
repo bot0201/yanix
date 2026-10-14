@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "zombie_kill_1b": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "zombie_head",
+            "components": {
+                "enchantments": {
+                    "sharpness": 20
+                }
+            }
+        },
+        "description": "累计击杀1000000000只僵尸",
+        "title": {
+            "text": "僵尸灭绝计划",
+            "color": "dark_red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_1b"
+    },
+    "parent": "pve:zombie_kill_10m"
+}

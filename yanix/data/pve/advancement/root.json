@@ -1,0 +1,14 @@
+{
+    "criteria": {
+        "pve:root": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "title": "PVE系列成就",
+        "description": "PVE系列成就",
+        "icon": "zombie_head",
+        "frame": "task"
+    },
+    "parent": "main:root"
+}

@@ -1,2 +1,0 @@
-scoreboard objectives add kitbattle_exp dummy
-scoreboard objectives add kitbattle_kills minecraft.killed:minecraft.player

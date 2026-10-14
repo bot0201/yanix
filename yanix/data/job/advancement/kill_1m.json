@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "kill_1m": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "netherite_sword",
+            "components": {
+                "enchantments": {
+                    "sharpness": 10
+                }
+            }
+        },
+        "description": "累计击杀1000000名玩家",
+        "title": {
+            "text": "百万人斩",
+            "color": "dark_red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_1m"
+    },
+    "parent": "job:kill_10k"
+}

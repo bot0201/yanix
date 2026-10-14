@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "kill_1k": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "goal",
+        "icon": {
+            "id": "iron_sword",
+            "components": {
+                "enchantments": {
+                    "sharpness": 1
+                }
+            }
+        },
+        "description": "累计击杀1000名玩家",
+        "title": {
+            "text": "身经百战",
+            "color": "gold",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_1k"
+    },
+    "parent": "job:kill_100"
+}

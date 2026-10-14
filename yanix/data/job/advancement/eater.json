@@ -31,5 +31,8 @@
       "eat_golden_apple"
     ]
   ],
-  "parent": "main:root"
+  "parent": "main:root",
+  "rewards": {
+    "function": "job:advancement/eater"
+  }
 }

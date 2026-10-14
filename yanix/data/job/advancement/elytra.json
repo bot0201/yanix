@@ -19,7 +19,7 @@
         "announce_to_chat": true
     },
     "rewards": {
-        "function": "advancement:one_shot"
+        "function": "job:advancement/elytra"
     },
     "parent": "main:root"
 }

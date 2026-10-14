@@ -1,0 +1,1 @@
+tellraw @s {"text": "成就解锁：僵尸猎手！", "color": "green"}

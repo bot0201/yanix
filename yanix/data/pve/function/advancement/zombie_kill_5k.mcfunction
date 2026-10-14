@@ -1,0 +1,1 @@
+tellraw @s {"text": "成就解锁：末日使者！", "color": "gold"}

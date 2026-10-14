@@ -8,7 +8,8 @@ scoreboard objectives add skill_fearless_cd dummy
 
 scoreboard objectives add used_bow minecraft.used:bow
 scoreboard objectives add skill_fearless_cd_seconds dummy
+scoreboard objectives add kitbattle_exp dummy
+scoreboard objectives add kitbattle_kills minecraft.killed:minecraft.player
 
 scoreboard objectives add const dummy
 scoreboard players set #20 const 20
-schedule function job:main/tick 5t

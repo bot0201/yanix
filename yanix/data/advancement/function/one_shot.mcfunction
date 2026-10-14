@@ -1,1 +1,0 @@
-scoreboard players add @s kitbattle_exp 10

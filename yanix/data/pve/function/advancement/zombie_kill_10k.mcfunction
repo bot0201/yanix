@@ -1,0 +1,1 @@
+tellraw @s {"text": "成就解锁：屠僵勇士！", "color": "red"}

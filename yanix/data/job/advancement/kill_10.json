@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "kill_10": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "task",
+        "icon": {
+            "id": "iron_sword"
+        },
+        "description": "累计击杀10名玩家",
+        "title": {
+            "text": "初露锋芒",
+            "color": "green",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_10"
+    },
+    "parent": "job:root"
+}

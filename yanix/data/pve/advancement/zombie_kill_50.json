@@ -1,0 +1,25 @@
+{
+    "criteria": {
+        "zombie_kill_50": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "task",
+        "icon": {
+            "id": "zombie_head"
+        },
+        "description": "累计击杀50只僵尸",
+        "title": {
+            "text": "僵尸猎手",
+            "color": "green",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "pve:advancement/zombie_kill_50"
+    },
+    "parent": "pve:root"
+}

@@ -1,0 +1,30 @@
+{
+    "criteria": {
+        "kill_10k": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "diamond_sword",
+            "components": {
+                "enchantments": {
+                    "sharpness": 5
+                }
+            }
+        },
+        "description": "累计击杀10000名玩家",
+        "title": {
+            "text": "万人敌",
+            "color": "red",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": true
+    },
+    "rewards": {
+        "function": "job:advancement/kill_10k"
+    },
+    "parent": "job:kill_5k"
+}
