@@ -37,11 +37,11 @@ execute \
             custom_data={\
                 kit:1,\
                 skill:1,\
-                skill_oneshot:1\
+                spkill_oneshot:1\
             }\
         ] \
     at @s \
-    run give @n[type=player] minecraft:golden_axe[\
+    run give @p minecraft:golden_axe[\
         minecraft:enchantments={\
             sharpness:114\
         },\
