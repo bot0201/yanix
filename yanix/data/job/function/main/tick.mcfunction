@@ -23,31 +23,9 @@ function job:main/trigger_handler
 function job:main/cd_handler
 
 # 处理职业cd渲染
-scoreboard players operation @a[\
-        tag=skill_fearless_cd\
-    ] skill_fearless_cd_seconds = @a[\
-        tag=skill_fearless_cd\
-    ] skill_fearless_cd
-scoreboard players operation @a[\
-        tag=skill_fearless_cd\
-    ] skill_fearless_cd_seconds /= #20 const
-
 execute \
     as @a[tag=skill_fearless_cd] \
-    run title @s actionbar [\
-        {\
-            "text":"技能冷却中：",\
-            "color":"red"\
-        },\
-        {\
-            "score":{"name":"@s","objective":"skill_fearless_cd_seconds"},\
-            "color":"gold"\
-        },\
-        {\
-            "text":" 秒",\
-            "color":"red"\
-        }\
-    ]
+    run function job:main/cd_display_child
 
 execute \
     as @e[\

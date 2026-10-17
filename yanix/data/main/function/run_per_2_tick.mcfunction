@@ -4,102 +4,43 @@
 # ========================================
 
 # PVE 换弹检测（副手检查）
-execute as @a run function pve:gun/reload
+execute \
+    as @a[tag=gaming_pve] \
+    run function pve:gun/reload
 
 # PVE 配件菜单 trigger 处理
-execute as @a[scores={pve_attach=1..}] run function pve:gun/attach/handler
+execute \
+    as @a[tag=gaming_pve,scores={pve_attach=1..}] \
+    run function pve:gun/attach/handler
 
 # AWM 开镜系统
-execute as @a[tag=holding_awm] run function pve:gun/awm/scope
+execute \
+    as @a[tag=gaming_pve,tag=holding_awm] \
+    run function pve:gun/awm/scope
 
 # AWM 切枪自动关镜
-execute as @a[tag=scoping_awm,tag=!holding_awm] run function pve:gun/awm/scope_off
+execute \
+    as @a[tag=gaming_pve,tag=scoping_awm,tag=!holding_awm] \
+    run function pve:gun/awm/scope_off
 
-# AWM 栓动冷却递减
+# PVE 凉却递减（合并且移入子函数）
 execute \
     as @a[tag=gaming_pve] \
-    unless score @s awm_cooldown matches 0 \
-    run scoreboard players remove @s awm_cooldown 1
+    run function pve:gun/cooldown_tick
 
-# M2 射速冷却递减
-execute \
-    as @a[tag=gaming_pve] \
-    unless score @s m2_cooldown matches 0 \
-    run scoreboard players remove @s m2_cooldown 1
-
-# PVE 换弹计时
+# PVE 换弹计时（合并且移入子函数）
 execute \
     as @a[tag=reloading_m4a1] \
-    run scoreboard players add @s time 1
-execute \
-    as @a[tag=reloading_m4a1] \
-    if score @s time matches 60 \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/m4a1/reloaded
-execute \
-    as @a[tag=reloading_m4a1] \
-    if score @s time matches 40 \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/m4a1/reloaded
-
-# PVE 换弹计时（M1014 逐发装填）
+    run function pve:gun/m4a1/reload_tick
 execute \
     as @a[tag=reloading_m1014] \
-    run scoreboard players add @s time 1
-# 第一发（无快拔）
-execute \
-    as @a[tag=reloading_m1014,tag=!m1014_reload_cycle] \
-    if score @s time matches 10.. \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reload_one_shell
-# 第一发（快拔）
-execute \
-    as @a[tag=reloading_m1014,tag=!m1014_reload_cycle] \
-    if score @s time matches 7.. \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reload_one_shell
-# 后续（无快拔）
-execute \
-    as @a[tag=reloading_m1014,tag=m1014_reload_cycle] \
-    if score @s time matches 6.. \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reload_one_shell
-# 后续（快拔）
-execute \
-    as @a[tag=reloading_m1014,tag=m1014_reload_cycle] \
-    if score @s time matches 4.. \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/m1014/reload_one_shell
-
-# PVE 换弹计时（AWM）
+    run function pve:gun/m1014/reload_tick
 execute \
     as @a[tag=reloading_awm] \
-    run scoreboard players add @s time 1
-execute \
-    as @a[tag=reloading_awm] \
-    if score @s time matches 80 \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/awm/reloaded
-execute \
-    as @a[tag=reloading_awm] \
-    if score @s time matches 55 \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/awm/reloaded
-
-# PVE 换弹计时（M2 勃朗宁）
+    run function pve:gun/awm/reload_tick
 execute \
     as @a[tag=reloading_m2] \
-    run scoreboard players add @s time 1
-execute \
-    as @a[tag=reloading_m2] \
-    if score @s time matches 140 \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/m2/reloaded
-execute \
-    as @a[tag=reloading_m2] \
-    if score @s time matches 100 \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/m2/reloaded
+    run function pve:gun/m2/reload_tick
 
 # PVE 怪物召唤（不需要每 tick 检查）
 execute \
@@ -127,6 +68,3 @@ function accessories:trigger_handler
 
 # 饰品持续效果
 execute as @a[tag=gaming_pve] run function accessories:effect_loop
-
-# 玩家在线时间
-function main:online_time/online_time
