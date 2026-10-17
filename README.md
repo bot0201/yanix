@@ -5,7 +5,7 @@
 
 [![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21.11-blue.svg)](https://minecraft.net)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Size](https://img.shields.io/badge/Size-241%20KB-success.svg)]()
+[![Size](https://img.shields.io/badge/Size-276%20KB-success.svg)]()
 [![GitHub Stars](https://img.shields.io/github/stars/bot0201/yanix?style=for-the-badge&logo=github&label=Stars&color=yellow)]()
 
 ## 📖 项目简介 / Introduction
@@ -44,8 +44,10 @@
 *   **职业战争（kit_battle）**：包含职业系统、进度系统（如“颗秒！”）、自定义武器（秒人斧、珍珠弓）。
 *   **PVE 波次与 Boss 系统**：包含15波（高血量白板Boss）、25波（自带抗性3的折磨Boss）等关卡设计。
 *   **自定义成就**：如“老吃家”、“中国人能飞×2”等原版进度扩展。
-*   **雪球菜单（sbm实际上是SnowBallMenu的三个大写字母）**：纯数据包驱动的悬浮交互菜单。
+*   **雪球菜单（sbm实际上是SnowBallMenu的三个首字母）**：纯数据包驱动的悬浮交互菜单。
 
 
 ## 下载 / Download
-仅需点击code按钮，下载源代码并解压，然后将`yanix`文件夹拖入服务器端世界文件夹内的`datapacks`目录、输入指令`/reload`重新加载即可。
+1. 主页的点击code按钮，下载源代码并解压，然后将`yanix`文件夹拖入服务器端世界文件夹内的`datapacks`目录、输入指令`/reload`重新加载。
+2. 将`generated`文件夹拖入存档目录，用于模拟经营模式的结构生成数据。
+3. (可选，但非常建议)将yanix_resourcepack上传随便一个地方，然后拿到下载链接（可以是*.zip的格式），然后在`server.properties`中配置`resourcepack`为下载链接的URL。
