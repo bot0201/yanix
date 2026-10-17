@@ -1,0 +1,29 @@
+{
+    "criteria": {
+        "build_cow": {
+            "trigger": "default_block_use",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "blocks": [
+                                    "oak_button"
+                                ]
+                            },
+                            "position": {
+                                "x": 10.5,
+                                "y": -59,
+                                "z": 8
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "mining_adventure:build/default_house/build_groundfloor_storage"
+    }
+}
