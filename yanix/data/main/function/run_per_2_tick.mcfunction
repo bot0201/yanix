@@ -127,3 +127,6 @@ function accessories:trigger_handler
 
 # 饰品持续效果
 execute as @a[tag=gaming_pve] run function accessories:effect_loop
+
+# 玩家在线时间
+function main:online_time/online_time
