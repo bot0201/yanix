@@ -1,2 +1,0 @@
-scoreboard players set #summon_zombie recursion_running_count 2
-function pve:spawn/zombie/spawn_zombie_per_player_entrance
