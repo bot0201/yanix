@@ -1,6 +1,5 @@
 {
     "values": [
-        "job:main/init",
-        "mining_adventure:init"
+        "main:init_all"
     ]
 }
