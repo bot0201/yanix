@@ -36,6 +36,8 @@ alwaysApply: true
 + [Minecraft 槽位源](https://zh.minecraft.wiki/w/槽位源)
 + [Minecraft 自定义世界生成](https://zh.minecraft.wiki/w/自定义世界生成)
 
+** 需要用宏时必须阅读：[Minecraft 宏](https://zh.minecraft.wiki/w/Java%E7%89%88%E5%87%BD%E6%95%B0?variant=zh-cn#%E5%AE%8F) **
+
 # 此服务器含有的世界
 ## 主世界
 + 名称为overworld
