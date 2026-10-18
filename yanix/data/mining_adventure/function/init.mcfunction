@@ -13,8 +13,16 @@ scoreboard objectives add sell_iron trigger
 scoreboard objectives add sell_gold trigger
 scoreboard objectives add sell_diamond trigger
 
+# 房屋系统 - 购买触发
+scoreboard objectives add house trigger
+scoreboard objectives add house_place trigger
+scoreboard objectives add house_buy trigger
+
 # 卖矿系统 - 货币计分板
 scoreboard objectives add mining_adventure_money dummy
+
+# 卖矿系统 - 计算用临时计分板
+scoreboard objectives add tmp dummy
 
 # 卖矿系统 - 计算用常量
 scoreboard players set #1 const 1

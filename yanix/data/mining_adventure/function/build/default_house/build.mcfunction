@@ -1,6 +1,21 @@
 ## 起始点: x-z-的端点
 # 应为x=0, z=0，所以起始点为0,-61,0。（因为包含地板所以Y轴为-60-1=-61）
 
+# 检查余额
+execute \
+    unless score @s mining_adventure_money matches 10.. \
+    run tellraw @s [\
+        {"text":"金币不足！","color":"red"},\
+        {"text":" 需要 10 金币，当前余额：","color":"white"},\
+        {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"}\
+    ]
+execute \
+    unless score @s mining_adventure_money matches 10.. \
+    run return fail
+
+# 扣款
+scoreboard players remove @s mining_adventure_money 10
+
 # 通过指令放置结构
 place template minecraft:default_house 0 -60 0
 
@@ -27,3 +42,13 @@ summon text_display 10 ~2 8 {\
             0\
         ]\
     }
+
+# 成功提示
+tellraw @s [\
+    {"text":"小屋建造完成！","color":"green"},\
+    {"text":" 花费了 ","color":"white"},\
+    {"text":"10 金币","color":"gold"},\
+    {"text":"，剩余：","color":"white"},\
+    {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"}\
+]
+playsound minecraft:block.wood.place player @s ~ ~ ~ 1 1
