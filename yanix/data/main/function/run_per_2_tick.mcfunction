@@ -66,5 +66,8 @@ function pve:advancement/check_zombie_kills
 # 饰品 trigger 处理
 function accessories:trigger_handler
 
+# 模拟经营卖矿 trigger 处理
+function mining_adventure:sell/trigger_handler
+
 # 饰品持续效果
 execute as @a[tag=gaming_pve] run function accessories:effect_loop

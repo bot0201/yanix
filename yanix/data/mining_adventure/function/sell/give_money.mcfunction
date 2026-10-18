@@ -1,0 +1,1 @@
+$scoreboard players add @s mining_adventure_money $(sell_count)
