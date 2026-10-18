@@ -1,12 +1,8 @@
-# 握把子菜单
-tellraw @s [\
-    "",\
-    {"text":"\n----- 选择握把 -----\n","color":"gold"},\
-    {"text":"[卸下]","color":"red","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 330"}},\
-    {"text":"  "},\
-    {"text":"[垂直握把]","color":"green","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 331"}},\
-    {"text":"  "},\
-    {"text":"[三角握把]","color":"green","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 332"}},\
-    {"text":"\n\n"},\
-    {"text":"[返回]","color":"gray","clickEvent":{"action":"run_command","command":"/function pve:gun/attach/menu"}}\
-]
+# ========================================
+# 配件菜单 - 握把
+# 由 tick (server 身份) 调用，规避 /dialog 权限问题
+# ========================================
+execute \
+    if entity @a[tag=request_attach_menu_grip] \
+    run dialog show @a[tag=request_attach_menu_grip] pve:attach_menu_grip
+tag @a[tag=request_attach_menu_grip] remove request_attach_menu_grip

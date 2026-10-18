@@ -8,3 +8,6 @@ function pve:grenade/tick
 
 # 磁吸炸弹物理引擎
 function pve:magnetic_bomb/tick
+
+# 模拟经营 - 电力系统
+function mining_adventure:power/tick

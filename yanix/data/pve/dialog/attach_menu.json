@@ -1,0 +1,54 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "配件系统",
+    "color": "gold",
+    "bold": true
+  },
+  "actions": [
+    {
+      "label": {"text": "瞄准镜", "color": "aqua"},
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "pve:attach_menu_scope"
+      }
+    },
+    {
+      "label": {"text": "枪口", "color": "aqua"},
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "pve:attach_menu_muzzle"
+      }
+    },
+    {
+      "label": {"text": "握把", "color": "aqua"},
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "pve:attach_menu_grip"
+      }
+    },
+    {
+      "label": {"text": "弹匣", "color": "aqua"},
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "pve:attach_menu_mag"
+      }
+    },
+    {
+      "label": {"text": "查看当前配件", "color": "green"},
+      "tooltip": {"text": "查看已装备的配件等级"},
+      "action": {
+        "type": "minecraft:show_dialog",
+        "dialog": "pve:attach_list"
+      }
+    },
+    {
+      "label": {"text": "卸下全部配件", "color": "red"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 900"
+      }
+    }
+  ],
+  "columns": 1
+}

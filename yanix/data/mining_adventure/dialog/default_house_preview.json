@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "text": "🏠 温馨小木屋 🏠",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 300,
+      "contents": [
+        {"text": "规格：default_house 模板", "color": "white"},
+        {"text": "\n"},
+        {"text": "附属：牛圈、猪圈、存储间", "color": "white"},
+        {"text": "\n\n"},
+        {"text": "价格：", "color": "white"},
+        {"text": "10 金币", "color": "gold", "bold": true},
+        {"text": "    余额：", "color": "white"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "mining_adventure_money"
+          },
+          "color": "gold"
+        }
+      ]
+    }
+  ],
+  "action": {
+    "label": {"text": "确认购买", "color": "green"},
+    "tooltip": {"text": "花费 10 金币建造小屋\n含牛圈、猪圈、存储间"},
+    "action": {
+      "type": "minecraft:run_command",
+      "command": "trigger house_buy set 1"
+    }
+  }
+}

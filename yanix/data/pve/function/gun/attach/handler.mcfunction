@@ -4,12 +4,12 @@
 # ---- 打开主菜单 ----
 execute \
     if score @s pve_attach matches 100 \
-    run function pve:gun/attach/menu
+    run tag @s add request_attach_menu
 
 # ---- 瞄准镜 ----
 execute \
     if score @s pve_attach matches 101 \
-    run function pve:gun/attach/menu_scope
+    run tag @s add request_attach_menu_scope
 
 execute \
     if score @s pve_attach matches 110 \
@@ -30,7 +30,7 @@ execute \
 # ---- 枪口 ----
 execute \
     if score @s pve_attach matches 201 \
-    run function pve:gun/attach/menu_muzzle
+    run tag @s add request_attach_menu_muzzle
 
 execute \
     if score @s pve_attach matches 220 \
@@ -45,7 +45,7 @@ execute \
 # ---- 握把 ----
 execute \
     if score @s pve_attach matches 301 \
-    run function pve:gun/attach/menu_grip
+    run tag @s add request_attach_menu_grip
 
 execute \
     if score @s pve_attach matches 330 \
@@ -60,7 +60,7 @@ execute \
 # ---- 弹匣 ----
 execute \
     if score @s pve_attach matches 401 \
-    run function pve:gun/attach/menu_mag
+    run tag @s add request_attach_menu_mag
 
 execute \
     if score @s pve_attach matches 440 \
@@ -75,7 +75,7 @@ execute \
 # ---- 查看 ----
 execute \
     if score @s pve_attach matches 800 \
-    run function pve:gun/attach/list
+    run tag @s add request_attach_list
 
 # ---- 卸下全部 ----
 execute \

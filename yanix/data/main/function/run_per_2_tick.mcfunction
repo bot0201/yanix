@@ -71,3 +71,14 @@ function mining_adventure:sell/trigger_handler
 
 # 饰品持续效果
 execute as @a[tag=gaming_pve] run function accessories:effect_loop
+
+# ========================================
+# 对话框请求处理 (server 身份, /dialog 需要权限)
+# ========================================
+function pve:gun/attach/menu
+function pve:gun/attach/menu_scope
+function pve:gun/attach/menu_muzzle
+function pve:gun/attach/menu_grip
+function pve:gun/attach/menu_mag
+function pve:gun/attach/list
+function accessories:shop/dialog

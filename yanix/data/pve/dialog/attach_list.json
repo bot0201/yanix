@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:notice",
+  "title": {
+    "text": "当前配件",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 200,
+      "contents": [
+        {"text": "瞄准镜: ", "color": "gray"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "attach_scope"
+          },
+          "color": "white"
+        },
+        {"text": "  枪口: ", "color": "gray"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "attach_muzzle"
+          },
+          "color": "white"
+        },
+        {"text": "\n握把: ", "color": "gray"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "attach_grip"
+          },
+          "color": "white"
+        },
+        {"text": "  弹匣: ", "color": "gray"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "attach_mag"
+          },
+          "color": "white"
+        },
+        {"text": "\n\n", "color": "reset"},
+        {"text": "配件值: 0=无 1/2/3/4=不同等级", "color": "dark_gray"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "⛏ 矿石回收站 ⛏",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 300,
+      "contents": [
+        {"text": "选择要出售的矿石：", "color": "white"},
+        {"text": "\n"},
+        {"text": "煤炭 4→1金 | 粗铁 2→1金 | 粗金 1→1金 | 钻石 1→3金", "color": "gray", "italic": true},
+        {"text": "\n\n"},
+        {"text": "余额：", "color": "white"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "mining_adventure_money"
+          },
+          "color": "gold"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {"text": "煤炭", "color": "dark_gray"},
+      "tooltip": {"text": "出售所有煤炭\n4 煤炭 = 1 金币"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger sell_coal set 1"
+      }
+    },
+    {
+      "label": {"text": "粗铁", "color": "white"},
+      "tooltip": {"text": "出售所有粗铁\n2 粗铁 = 1 金币"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger sell_iron set 1"
+      }
+    },
+    {
+      "label": {"text": "粗金", "color": "gold"},
+      "tooltip": {"text": "出售所有粗金\n1 粗金 = 1 金币"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger sell_gold set 1"
+      }
+    },
+    {
+      "label": {"text": "钻石", "color": "aqua"},
+      "tooltip": {"text": "出售所有钻石\n1 钻石 = 3 金币"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger sell_diamond set 1"
+      }
+    }
+  ],
+  "columns": 1
+}

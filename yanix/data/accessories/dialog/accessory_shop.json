@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "★ 饰品商店 ★",
+    "color": "gold",
+    "bold": true
+  },
+  "actions": [
+    {
+      "label": {"text": "宇航员头盔", "color": "aqua"},
+      "tooltip": {"text": "3 绿宝石\n装备在头部"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger buy_astronaut_helmet set 1"
+      }
+    },
+    {
+      "label": {"text": "神秘眼镜", "color": "dark_purple"},
+      "tooltip": {"text": "3 绿宝石\n装备在头部"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger buy_mysterious_goggles set 1"
+      }
+    }
+  ],
+  "columns": 1
+}

@@ -1,7 +1,7 @@
 # 打开卖矿对话框
 execute \
     if score @s sell_ores matches 1.. \
-    run function mining_adventure:sell/dialog
+    run tag @s add request_sell_dialog
 execute \
     if score @s sell_ores matches 1.. \
     run scoreboard players set @s sell_ores 0
@@ -61,3 +61,27 @@ execute \
 execute \
     if score @s house_buy matches 1.. \
     run scoreboard players set @s house_buy 0
+
+# 电力商店 - 打开购买对话框
+execute \
+    if score @s power_shop matches 1.. \
+    run tag @s add request_power_shop
+execute \
+    if score @s power_shop matches 1.. \
+    run scoreboard players set @s power_shop 0
+
+# 太阳能发电机 - 开始射线检测放置
+execute \
+    if score @s power_solar matches 1.. \
+    run function mining_adventure:power/solar_raycast_start
+execute \
+    if score @s power_solar matches 1.. \
+    run scoreboard players set @s power_solar 0
+
+# 自动采矿机 - 开始射线检测放置
+execute \
+    if score @s power_mining matches 1.. \
+    run function mining_adventure:power/mining_raycast_start
+execute \
+    if score @s power_mining matches 1.. \
+    run scoreboard players set @s power_mining 0

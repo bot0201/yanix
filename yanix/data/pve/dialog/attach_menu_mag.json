@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "选择弹匣",
+    "color": "gold"
+  },
+  "actions": [
+    {
+      "label": {"text": "扩容弹匣", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 441"
+      }
+    },
+    {
+      "label": {"text": "快速弹匣", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 442"
+      }
+    },
+    {
+      "label": {"text": "卸下", "color": "red"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 440"
+      }
+    }
+  ],
+  "columns": 1,
+  "exit_action": {
+    "label": {"text": "返回", "color": "gray"},
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "pve:attach_menu"
+    }
+  }
+}

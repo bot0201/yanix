@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "⚡ 电力设备商店 ⚡",
+    "color": "gold",
+    "bold": true
+  },
+  "body": [
+    {
+      "type": "minecraft:plain_message",
+      "width": 300,
+      "contents": [
+        {"text": "当前电力：", "color": "white"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "electricity"
+          },
+          "color": "yellow"
+        },
+        {"text": "    余额：", "color": "white"},
+        {
+          "score": {
+            "name": "@s",
+            "objective": "mining_adventure_money"
+          },
+          "color": "gold"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "label": {"text": "太阳能发电机", "color": "yellow"},
+      "tooltip": {"text": "花费 5 金币建造\n白天自动产生电力"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger power_solar set 1"
+      }
+    },
+    {
+      "label": {"text": "自动采矿机", "color": "aqua"},
+      "tooltip": {"text": "花费 10 金币建造\n消耗电力自动产出矿石"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger power_mining set 1"
+      }
+    }
+  ],
+  "columns": 1
+}

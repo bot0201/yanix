@@ -1,68 +1,8 @@
 # ========================================
-# 饰品商店 - 对话式购买 (tellraw 平替)
-# 无需跑到箱子前，点击 tellraw 消息即可购买
+# 饰品商店 - 打开对话框
+# 由 tick (server 身份) 调用，规避 /dialog 权限问题
 # ========================================
-
-tellraw @s [\
-    {\
-        "text":"┌────────────────────────────┐",\
-        "color":"dark_aqua"\
-    },\
-    {"text":"\n"},\
-    {\
-        "text":"   ★ 饰品商店 - 对话式购买 ★",\
-        "color":"gold",\
-        "bold":true\
-    },\
-    {"text":"\n"},\
-    {"text":"\n"},\
-    {"text":"  "},\
-    {\
-        "text":"[宇航员头盔]",\
-        "color":"aqua",\
-        "bold":true,\
-        "click_event":{\
-            "action":"run_command",\
-            "command":"/trigger buy_astronaut_helmet set 1"\
-        }\
-    },\
-    {"text":"  "},\
-    {\
-        "text":"3 绿宝石  ",\
-        "color":"gold"\
-    },\
-    {\
-        "text":"装备在头部",\
-        "color":"gray",\
-        "italic":true\
-    },\
-    {"text":"\n"},\
-    {"text":"\n"},\
-    {\
-        "text":"  "},\
-        {\
-            "text":"[神秘眼镜]",\
-            "color":"dark_purple",\
-            "bold":true,\
-            "click_event":{\
-                "action":"run_command",\
-                "command":"/trigger buy_mysterious_goggles set 1"\
-            }\
-        },\
-        {"text":"  "},\
-        {\
-            "text":"3 绿宝石  ",\
-            "color":"gold"\
-        },\
-        {\
-            "text":"装备在头部",\
-            "color":"gray",\
-            "italic":true\
-        },\
-        {"text":"\n"},\
-        {"text":"\n"},\
-        {\
-            "text":"└────────────────────────────┘",\
-            "color":"dark_aqua"\
-        }\
-    ]
+execute \
+    if entity @a[tag=request_accessory_shop] \
+    run dialog show @a[tag=request_accessory_shop] accessories:accessory_shop
+tag @a[tag=request_accessory_shop] remove request_accessory_shop

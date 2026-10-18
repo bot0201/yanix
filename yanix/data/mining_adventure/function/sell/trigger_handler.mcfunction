@@ -10,6 +10,11 @@ scoreboard players enable @a house
 scoreboard players enable @a house_place
 scoreboard players enable @a house_buy
 
+# 启用电力 trigger
+scoreboard players enable @a power_shop
+scoreboard players enable @a power_solar
+scoreboard players enable @a power_mining
+
 # 合并为单次 @a 扫描
 execute \
     as @a \

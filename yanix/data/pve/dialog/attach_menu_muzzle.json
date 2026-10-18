@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "选择枪口",
+    "color": "gold"
+  },
+  "actions": [
+    {
+      "label": {"text": "消音器", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 221"
+      }
+    },
+    {
+      "label": {"text": "补偿器", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 222"
+      }
+    },
+    {
+      "label": {"text": "卸下", "color": "red"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 220"
+      }
+    }
+  ],
+  "columns": 1,
+  "exit_action": {
+    "label": {"text": "返回", "color": "gray"},
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "pve:attach_menu"
+    }
+  }
+}

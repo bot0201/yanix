@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "选择握把",
+    "color": "gold"
+  },
+  "actions": [
+    {
+      "label": {"text": "垂直握把", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 331"
+      }
+    },
+    {
+      "label": {"text": "三角握把", "color": "green"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 332"
+      }
+    },
+    {
+      "label": {"text": "卸下", "color": "red"},
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger pve_attach set 330"
+      }
+    }
+  ],
+  "columns": 1,
+  "exit_action": {
+    "label": {"text": "返回", "color": "gray"},
+    "action": {
+      "type": "minecraft:show_dialog",
+      "dialog": "pve:attach_menu"
+    }
+  }
+}

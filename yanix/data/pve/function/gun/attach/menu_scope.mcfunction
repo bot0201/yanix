@@ -1,16 +1,8 @@
-# 瞄准镜子菜单
-tellraw @s [\
-    "",\
-    {"text":"\n----- 选择瞄准镜 -----\n","color":"gold"},\
-    {"text":"[卸下]","color":"red","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 110"}},\
-    {"text":"  "},\
-    {"text":"[红点]","color":"green","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 111"}},\
-    {"text":"  "},\
-    {"text":"[全息]","color":"green","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 112"}},\
-    {"text":"\n"},\
-    {"text":"[四倍]","color":"yellow","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 113"}},\
-    {"text":"  "},\
-    {"text":"[八倍]","color":"yellow","clickEvent":{"action":"run_command","command":"/trigger pve_attach set 114"}},\
-    {"text":"\n"},\
-    {"text":"[返回]","color":"gray","clickEvent":{"action":"run_command","command":"/function pve:gun/attach/menu"}}\
-]
+# ========================================
+# 配件菜单 - 瞄准镜
+# 由 tick (server 身份) 调用，规避 /dialog 权限问题
+# ========================================
+execute \
+    if entity @a[tag=request_attach_menu_scope] \
+    run dialog show @a[tag=request_attach_menu_scope] pve:attach_menu_scope
+tag @a[tag=request_attach_menu_scope] remove request_attach_menu_scope
