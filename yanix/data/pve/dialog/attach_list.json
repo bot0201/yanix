@@ -42,7 +42,7 @@
           },
           "color": "white"
         },
-        {"text": "\n\n", "color": "reset"},
+        {"text": "\n\n"},
         {"text": "配件值: 0=无 1/2/3/4=不同等级", "color": "dark_gray"}
       ]
     }

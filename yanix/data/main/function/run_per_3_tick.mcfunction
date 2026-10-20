@@ -3,25 +3,11 @@
 # 放置低频逻辑
 # ========================================
 
-# 饰品商店箱子菜单刷新（静态内容，低频刷新即可）
+# 箱子菜单系统（附近无玩家时跳过）
 execute \
-    if dimension minecraft:overworld \
-    run function accessories:shop/refresh
-
-# SBM 箱子菜单刷新
-execute \
-    if dimension minecraft:overworld \
-    run function sbm:chest/refresh
-
-# SBM 箱子菜单 - 点击检测
-function sbm:chest/scan
-
-# 清理玩家背包中被拿取的箱子菜单物品 (menu:1)
-execute \
-    if dimension minecraft:overworld \
     positioned -10 69 -9 \
-    as @a[distance=..8] \
-    run clear @s *[custom_data~{menu:1}]
+    if entity @a[distance=..16] \
+    run function sbm:tick_3
 
 # 成就授予
 function job:main/give_advancement

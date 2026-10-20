@@ -21,9 +21,6 @@ scoreboard objectives add house_buy trigger
 # 卖矿系统 - 货币计分板
 scoreboard objectives add mining_adventure_money dummy
 
-# 卖矿系统 - 计算用临时计分板
-scoreboard objectives add tmp dummy
-
 # 电力系统 - 触发
 scoreboard objectives add power_shop trigger
 scoreboard objectives add power_solar trigger
