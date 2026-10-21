@@ -10,3 +10,6 @@ scoreboard objectives add used_bow minecraft.used:bow
 scoreboard objectives add skill_fearless_cd_seconds dummy
 scoreboard objectives add kitbattle_exp dummy
 scoreboard objectives add kitbattle_kills minecraft.killed:minecraft.player
+scoreboard objectives add used_crossbow minecraft.used:minecraft.crossbow
+scoreboard objectives add crystal_arrow_timer dummy
+scoreboard objectives add crystal_y dummy
