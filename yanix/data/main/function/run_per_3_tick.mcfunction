@@ -14,3 +14,6 @@ function job:main/give_advancement
 
 # 玩家在线时间
 function main:online_time/online_time
+
+# 注册
+function main:users/reg_check

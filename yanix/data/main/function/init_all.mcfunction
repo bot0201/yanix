@@ -2,7 +2,7 @@
 
 # 常数
 scoreboard objectives add const dummy
-function main:lib/const
+function main:lib/const/start
 
 # 防止玩家重生到其他位置
 gamerule respawn_radius 0
