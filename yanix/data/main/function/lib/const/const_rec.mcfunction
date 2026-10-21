@@ -1,0 +1,1 @@
+$scoreboard players set #$(n) const $(n)

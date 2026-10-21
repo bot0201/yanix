@@ -2,8 +2,7 @@
 
 # 常数
 scoreboard objectives add const dummy
-scoreboard players set #20 const 20
-scoreboard players set #60 const 60
+function main:lib/const
 
 # 防止玩家重生到其他位置
 gamerule respawn_radius 0
@@ -16,10 +15,11 @@ function main:online_time/init
 
 
 # 调用各个模块的初始化函数
-function main:lib/init
-function main:ctrl/init
-function job:main/init
-function mining_adventure:init
 function pve:init
 function sbm:init
+function main:lib/init
+function job:main/init
+function main:ctrl/init
+function main:users/init
 function accessories:init
+function mining_adventure:init
