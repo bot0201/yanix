@@ -2,12 +2,8 @@
 # 电力系统 - 每 tick 处理
 # 太阳能发电机: 白天产生电力
 # 自动采矿机: 消耗电力产出矿石
+# 对话框请求已移至 run_per_2_tick
 # ========================================
-
-# 对话框请求处理 (server 身份, /dialog 需要权限)
-function mining_adventure:power/dialog
-function mining_adventure:house/dialog
-function mining_adventure:sell/dialog
 
 # 递增 tick 计数器
 scoreboard players add #power_tick tmp 1

@@ -9,8 +9,13 @@ execute \
     if entity @a[distance=..16] \
     run function sbm:tick_3
 
-# 成就授予
-function job:main/give_advancement
+# 成就授予（仅首次执行）
+execute \
+    unless score #advancement_granted const matches 1 \
+    run function job:main/give_advancement
+execute \
+    unless score #advancement_granted const matches 1 \
+    run scoreboard players set #advancement_granted const 1
 
 # 玩家在线时间
 function main:online_time/online_time

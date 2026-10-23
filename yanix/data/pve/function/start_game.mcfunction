@@ -18,12 +18,6 @@ tag @a add gaming_pve
 # ---- 清除背包并分发武器 ----
 function pve:start_game/give_guns
 
-# ---- 分发饰品 ----
-# 如果已有 gave_accessories 标签则不重复给
-execute \
-    as @a[tag=!gave_accessories] \
-    run function accessories:give
-
 # ---- 设置第一波 ----
 scoreboard players set #pve horde 1
 

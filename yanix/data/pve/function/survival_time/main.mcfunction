@@ -1,5 +1,5 @@
 execute \
     as @a \
     at @s \
-    if dimension minecraft:kitbattle \
-    run function job:survival_time/sync
+    if dimension minecraft:pve \
+    run function pve:survival_time/sync
