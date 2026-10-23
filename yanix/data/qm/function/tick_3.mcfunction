@@ -7,14 +7,6 @@ execute \
     if dimension minecraft:overworld \
     run function accessories:shop/refresh
 
-# SBM 箱子菜单刷新
-execute \
-    if dimension minecraft:overworld \
-    run function sbm:chest/refresh
-
-# SBM 箱子菜单 - 点击检测
-function sbm:chest/scan
-
 # 清理玩家背包中被拿取的箱子菜单物品 (menu:1)
 execute \
     if dimension minecraft:overworld \
