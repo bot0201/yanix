@@ -12,27 +12,7 @@ execute \
     as @a \
     run function pve:gun/reload_tick_dispatcher
 
-# PVE 怪物召唤
+# PVE 世界级逻辑（合并 5 次 if entity 为单次）
 execute \
     if entity @a[tag=gaming_pve] \
-    run function pve:summon
-
-# PVE 时间计数
-execute \
-    if entity @a[tag=gaming_pve] \
-    run scoreboard players add #pve time 1
-
-# PVE 波次推进
-execute \
-    if entity @a[tag=gaming_pve] \
-    run function pve:horde_going
-
-# Boss 死亡检测
-execute \
-    if entity @a[tag=gaming_pve] \
-    run function pve:boss/death_check
-
-# PVE 累计击杀成就检查
-execute \
-    if entity @a[tag=gaming_pve] \
-    run function pve:advancement/check_zombie_kills
+    run function pve:tick_2_pve_logic

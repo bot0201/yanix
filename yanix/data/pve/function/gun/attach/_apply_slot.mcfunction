@@ -1,0 +1,2 @@
+$execute if items entity @s weapon.offhand *[minecraft:custom_data~{attach_slot:"$(slot)",attach_val:$(val)}] run scoreboard players set @s attach_$(slot) $(val)
+$execute if items entity @s weapon.offhand *[minecraft:custom_data~{attach_slot:"$(slot)",attach_val:$(val)}] run tag @s add attach_consumed
