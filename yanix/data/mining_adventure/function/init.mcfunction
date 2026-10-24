@@ -29,13 +29,4 @@ scoreboard objectives add power_mining trigger
 # 电力系统 - 电力存储
 scoreboard objectives add electricity dummy
 
-# 卖矿系统 - 计算用常量
-scoreboard players set #1 const 1
-scoreboard players set #2 const 2
-scoreboard players set #3 const 3
-scoreboard players set #4 const 4
-scoreboard players set #5 const 5
-scoreboard players set #7 const 7
-scoreboard players set #10 const 10
-scoreboard players set #14 const 14
-scoreboard players set #100 const 100
+# 计算用常量由 lib:const 统一生成（0..1000），此处无需重复设置

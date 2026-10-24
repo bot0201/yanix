@@ -43,9 +43,7 @@ execute \
         tag=kitbattle_centre\
     ] \
     at @s run execute \
-        as @p[\
-            sort=furthest,\
-            distance=95..\
-        ] \
-        at @s if dimension minecraft:kitbattle \
+        as @a[distance=95..] \
+        at @s \
+        if dimension minecraft:kitbattle \
         run function job:main/out_of_world_child
