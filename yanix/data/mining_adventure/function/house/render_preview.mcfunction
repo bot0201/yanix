@@ -44,4 +44,4 @@ data modify storage main:lib.fx.cuboid step set value 1.0d
 data modify storage main:lib.fx.cuboid delta set value 0.0d
 
 # 渲染 cuboid
-function main:lib/fx/cuboid with storage main:lib.fx.cuboid
+function lib:fx/cuboid with storage main:lib.fx.cuboid

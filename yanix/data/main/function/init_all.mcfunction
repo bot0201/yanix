@@ -2,7 +2,7 @@
 
 # 常数
 scoreboard objectives add const dummy
-function main:lib/const/start
+function lib:const/start
 
 # 防止玩家重生到其他位置
 gamerule respawn_radius 0
@@ -13,11 +13,9 @@ scoreboard objectives add tmp dummy
 # 初始化玩家在线时间
 function main:online_time/init
 
-
 # 调用各个模块的初始化函数
 function pve:init
-function sbm:init
-function main:lib/init
+function lib:init
 function job:main/init
 function main:ctrl/init
 function main:users/init

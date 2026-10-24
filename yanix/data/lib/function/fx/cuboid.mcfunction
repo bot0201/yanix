@@ -9,7 +9,7 @@
 #   step: 0.5d,                        # 粒子间距(默认0.5)
 #   delta: 0.0d                        # 粒子扩散(默认0.0)
 # }
-# 用法: function main:lib/fx/cuboid with storage main:lib.fx.cuboid
+# 用法: function lib:fx/cuboid with storage main:lib.fx.cuboid
 # ------------------------------------------------------------
 # step 支持的常用值: 0.125 | 0.2 | 0.25 | 0.5(默认) | 1.0
 # 若使用其他 step 值, 请预先设定 #lib_fx_step_inv tmp = round(1/step)
@@ -18,7 +18,7 @@
 #   data modify storage main:lib.fx.cuboid set value \
 #     {particle:"minecraft:dust{color:[1.0,0.0,0.0],scale:2}",\
 #      x1:0.0d,y1:0.0d,z1:0.0d,x2:5.0d,y2:3.0d,z2:5.0d,step:0.5d,delta:0.0d}
-#   function main:lib/fx/cuboid with storage main:lib.fx.cuboid
+#   function lib:fx/cuboid with storage main:lib.fx.cuboid
 # ============================================================
 
 # 默认值
@@ -173,25 +173,25 @@ data modify storage main:lib.fx.cuboid.line dz set value 0.0d
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
 $execute \
     positioned $(x1) $(y1) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边2: (x1, y2, z1) → (x2, y2, z1)  顶前
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
 $execute \
     positioned $(x1) $(y2) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边3: (x1, y1, z2) → (x2, y1, z2)  底后
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
 $execute \
     positioned $(x1) $(y1) $(z2) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边4: (x1, y2, z2) → (x2, y2, z2)  顶后
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
 $execute \
     positioned $(x1) $(y2) $(z2) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # ============================================================
 # Y 轴边: dx = 0, dy = step, dz = 0
@@ -204,25 +204,25 @@ data modify storage main:lib.fx.cuboid.line dz set value 0.0d
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
 $execute \
     positioned $(x1) $(y1) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边6: (x2, y1, z1) → (x2, y2, z1)  右前
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
 $execute \
     positioned $(x2) $(y1) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边7: (x1, y1, z2) → (x1, y2, z2)  左后
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
 $execute \
     positioned $(x1) $(y1) $(z2) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边8: (x2, y1, z2) → (x2, y2, z2)  右后
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
 $execute \
     positioned $(x2) $(y1) $(z2) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # ============================================================
 # Z 轴边: dx = 0, dy = 0, dz = step
@@ -235,22 +235,22 @@ $data modify storage main:lib.fx.cuboid.line dz set value $(step)
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
 $execute \
     positioned $(x1) $(y1) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边10: (x2, y1, z1) → (x2, y1, z2)  底右
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
 $execute \
     positioned $(x2) $(y1) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边11: (x1, y2, z1) → (x1, y2, z2)  顶左
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
 $execute \
     positioned $(x1) $(y2) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边12: (x2, y2, z1) → (x2, y2, z2)  顶右
 scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
 $execute \
     positioned $(x2) $(y2) $(z1) \
-    run function main:lib/fx/cuboid/line with storage main:lib.fx.cuboid.line
+    run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line

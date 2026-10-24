@@ -7,7 +7,7 @@
 execute \
     positioned -10 69 -9 \
     if entity @a[distance=..16] \
-    run function sbm:tick_3
+    run function qm:tick_3
 
 # 成就授予（仅首次执行）
 execute \
