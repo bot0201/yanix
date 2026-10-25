@@ -24,6 +24,9 @@ function accessories:trigger_handler
 # 模拟经营卖矿 trigger 处理
 function mining_adventure:sell/trigger_handler
 
+# 空岛生存
+function skyblock:tick
+
 # ========================================
 # 对话框请求处理 (server 身份, /dialog 需要权限)
 # ========================================

@@ -18,3 +18,4 @@ function main:init
 function accessories:init
 function mining_adventure:init
 function misc:init
+function skyblock:init

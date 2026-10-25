@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "root": {
+            "trigger": "impossible"
+        }
+    },
+    "display": {
+        "frame": "challenge",
+        "icon": {
+            "id": "minecraft:grass_block"
+        },
+        "description": "从一无所有开始，创造你的世界",
+        "title": {
+            "text": "空岛生存",
+            "color": "green",
+            "bold": true
+        },
+        "hidden": false,
+        "announce_to_chat": false
+    },
+    "parent": "main:root"
+}
