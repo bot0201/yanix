@@ -30,4 +30,4 @@ tellraw @s [\
     {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"},\
     {"text":"）","color":"white"}\
 ]
-playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1
+playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 2
