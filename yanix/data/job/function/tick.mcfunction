@@ -42,7 +42,7 @@ execute \
         type=minecraft:marker,\
         tag=kitbattle_centre\
     ] \
-    at @s run execute \
+    at @s \
         as @a[distance=95..] \
         at @s \
         if dimension minecraft:kitbattle \
