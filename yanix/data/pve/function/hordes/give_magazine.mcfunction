@@ -2,4 +2,4 @@
 execute \
     store result score #pve random \
     run random value 1..2
-scoreboard players operation @s attach_magazine = #pve random
+scoreboard players operation @s attach_mag = #pve random

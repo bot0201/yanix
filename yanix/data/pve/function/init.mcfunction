@@ -15,3 +15,4 @@ function pve:gun/init
 function pve:gun/attach/init
 function pve:grenade/init
 function pve:magnetic_bomb/init
+function pve:survival_time/init

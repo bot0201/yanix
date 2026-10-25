@@ -19,7 +19,7 @@
         "announce_to_chat": true
     },
     "rewards": {
-        "function": "job:advancement/out_of_world"
+        "function": "job:advancement/reward/out_of_world"
     },
     "parent": "main:root"
 }

@@ -1,0 +1,4 @@
+scoreboard objectives add trigger_job_demolition trigger
+scoreboard objectives add used_crossbow minecraft.used:minecraft.crossbow
+scoreboard objectives add crystal_arrow_timer dummy
+scoreboard objectives add crystal_y dummy

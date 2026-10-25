@@ -5,7 +5,7 @@
         }
     },
     "display": {
-        "background": "job:advancement/gold_block",
+        "background": "job:advancement/reward/gold_block",
         "frame":"challenge",
         "icon": {
             "id": "minecraft:enchanted_golden_apple",
@@ -23,6 +23,6 @@
         "announce_to_chat": false
     },
     "rewards": {
-        "function": "main:root_advancement"
+        "function": "main:advancement/root_advancement"
     }
 }

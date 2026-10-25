@@ -1,0 +1,1 @@
+scoreboard objectives add trigger_job_assassin trigger

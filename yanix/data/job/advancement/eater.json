@@ -33,6 +33,6 @@
   ],
   "parent": "main:root",
   "rewards": {
-    "function": "job:advancement/eater"
+    "function": "job:advancement/reward/eater"
   }
 }

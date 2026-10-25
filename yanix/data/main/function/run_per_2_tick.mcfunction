@@ -10,13 +10,13 @@ execute \
     run function pve:tick_2
 
 # 职业技能处理
-function job:main/tick
+function job:tick
 
 # 职业技能击杀成就检查（有玩家在 kitbattle 时才执行）
 execute \
     in minecraft:kitbattle \
     if entity @a[limit=1] \
-    run function job:advancement/check_kills
+    run function job:advancement/reward/check_kills
 
 # 饰品 trigger 处理
 function accessories:trigger_handler

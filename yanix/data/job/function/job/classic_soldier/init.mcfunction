@@ -1,0 +1,3 @@
+scoreboard objectives add trigger_job_classic_soldier dummy
+scoreboard objectives add skill_fearless_cd dummy
+scoreboard objectives add skill_fearless_cd_seconds dummy

@@ -1,1 +1,1 @@
-tellraw @s {"text": "你获得了「精准误伤」成就！", "color": "red"}
+tellraw @s {"text": "你获得了「老贝榨」成就！", "color": "red"}

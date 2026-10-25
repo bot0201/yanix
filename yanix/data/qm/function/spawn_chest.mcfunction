@@ -1,5 +1,5 @@
 execute \
     as @a \
-    if items entity @s weapon.* clock[custom_data={"q_menu":1}] \
+    if items entity @s weapon.* clock[custom_data={"qm":1}] \
     anchored eyes \
-    run summon chest_minecart ^ ^ ^ {Tags:["q_menu"]}
+    run summon chest_minecart ^ ^ ^ {Tags:["qm"]}

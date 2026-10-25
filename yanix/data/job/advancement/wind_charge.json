@@ -45,6 +45,6 @@
     ]
   ],
   "rewards": {
-    "function": "job:advancement/wind_charge"
+    "function": "job:advancement/reward/wind_charge"
   }
 }

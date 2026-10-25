@@ -24,18 +24,18 @@ execute \
     run function job:archer/tp_bow
 
 # 启用职业trigger
-function job:main/enable_trigger
+function job:trigger/enable_trigger
 
 # 处理职业trigger
-function job:main/trigger_handler
+function job:trigger/trigger_handler
 
 # 处理职业cd
-function job:main/cd_handler
+function job:cd/cd_handler
 
 # 处理职业cd渲染
 execute \
     as @a[tag=skill_fearless_cd] \
-    run function job:main/cd_display_child
+    run function job:cd/cd_display_child
 
 execute \
     as @e[\
@@ -46,4 +46,7 @@ execute \
         as @a[distance=95..] \
         at @s \
         if dimension minecraft:kitbattle \
-        run function job:main/out_of_world_child
+        run function job:out_of_world_child
+
+# 中国人能飞成就
+function job:advancement/condition/elytra

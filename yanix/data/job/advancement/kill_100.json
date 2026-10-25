@@ -19,7 +19,7 @@
         "announce_to_chat": true
     },
     "rewards": {
-        "function": "job:advancement/kill_100"
+        "function": "job:advancement/reward/kill_100"
     },
     "parent": "job:kill_10"
 }

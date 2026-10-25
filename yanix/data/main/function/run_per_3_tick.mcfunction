@@ -11,14 +11,18 @@ execute \
 
 # 成就授予（仅首次执行）
 execute \
-    unless score #advancement_granted const matches 1 \
-    run function job:main/give_advancement
+    unless score #advancement_granted tmp matches 1 \
+    run function main:advancement/give_advancement
 execute \
-    unless score #advancement_granted const matches 1 \
-    run scoreboard players set #advancement_granted const 1
+    unless score #advancement_granted tmp matches 1 \
+    run scoreboard players set #advancement_granted tmp 1
+
+# ----------
+# 杂项
+# ----------
 
 # 玩家在线时间
-function main:online_time/online_time
+function misc:online_time/online_time
 
 # 注册
 function main:users/reg_check

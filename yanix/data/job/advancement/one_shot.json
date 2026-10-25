@@ -45,7 +45,7 @@
         "announce_to_chat": true
     },
     "rewards": {
-        "function": "job:advancement/one_shot"
+        "function": "job:advancement/reward/one_shot"
     },
     "parent": "main:root"
 }
