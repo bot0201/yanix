@@ -1,5 +1,5 @@
 execute \
-    store result storage const_rec const_rec int 1 \
+    store result storage const_rec const_rec.n int 1 \
     run scoreboard players get #const recursion_running_count
 function lib:const/const_rec with storage const_rec const_rec
 scoreboard players remove #const recursion_running_count 1
