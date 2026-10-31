@@ -1,0 +1,46 @@
+{
+    "type": "minecraft:multi_action",
+    "title": {
+        "text": "❄ 雪球测试菜单 ❄",
+        "color": "aqua",
+        "bold": true
+    },
+    "body": [
+        {
+            "type": "minecraft:plain_message",
+            "width": 300,
+            "contents": [
+                {"text": "用于测试箱子菜单的备用选项", "color": "gray", "italic": true},
+                {"text": "\n"},
+                {"text": "持有雪球右键即可打开此菜单", "color": "white"}
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "label": {"text": "测试: 发送消息", "color": "green"},
+            "tooltip": {"text": "向自己发送一条测试消息"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger test_msg set 1"
+            }
+        },
+        {
+            "label": {"text": "测试: 显示余额", "color": "gold"},
+            "tooltip": {"text": "查看当前金币余额"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger test_money set 1"
+            }
+        },
+        {
+            "label": {"text": "获取菜单雪球", "color": "aqua"},
+            "tooltip": {"text": "重新获取一个菜单雪球"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger test_get_snowball set 1"
+            }
+        }
+    ],
+    "columns": 1
+}

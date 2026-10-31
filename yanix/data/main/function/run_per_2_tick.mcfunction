@@ -41,3 +41,5 @@ function accessories:shop/dialog
 function mining_adventure:power/dialog
 function mining_adventure:house/dialog
 function mining_adventure:sell/dialog
+function main:snowball_menu/dialog
+function main:snowball_menu/trigger_handler

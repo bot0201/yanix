@@ -15,6 +15,7 @@ function pve:init
 function lib:init
 function job:init
 function main:init
+function main:snowball_menu/init
 function accessories:init
 function mining_adventure:init
 function misc:init

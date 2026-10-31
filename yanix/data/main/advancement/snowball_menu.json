@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "use": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:snowball",
+                    "components": {
+                        "minecraft:custom_data": {
+                            "snowball_menu": 1
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "main:snowball_menu/trigger"
+    }
+}
