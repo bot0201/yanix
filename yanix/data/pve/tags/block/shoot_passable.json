@@ -1,21 +1,19 @@
 {
     "values": [
-        "minecraft:air",
+        "#minecraft:air",
         "minecraft:short_grass",
         "minecraft:tall_grass",
         "minecraft:water",
-        "minecraft:cave_air",
-        "minecraft:void_air",
         "minecraft:light",
         "minecraft:torch",
         "minecraft:lantern",
         "minecraft:wall_torch",
-        "#all_signs",
+        "#minecraft:all_signs",
         "#minecraft:all_hanging_signs",
-        "#small_flowers",
+        "#minecraft:small_flowers",
         "minecraft:vine",
         "minecraft:fire",
-        "#crops",
+        "#minecraft:crops",
         "minecraft:oak_sapling",
         "minecraft:acacia_sapling",
         "minecraft:dark_oak_sapling",
@@ -26,6 +24,16 @@
         "minecraft:sunflower",
         "minecraft:rose_bush",
         "minecraft:spore_blossom",
-        "minecraft:pink_petals"
+        "minecraft:pink_petals",
+        "#minecraft:wool_carpets",
+        "minecraft:snow",
+        "minecraft:kelp",
+        "minecraft:redstone_wire",
+        "minecraft:repeater",
+        "minecraft:tripwire",
+        "minecraft:tripwire_hook",
+        "#minecraft:buttons",
+        "minecraft:lever",
+        "#minecraft:pressure_plates"
     ]
 }
