@@ -18,9 +18,6 @@ scoreboard objectives add house trigger
 scoreboard objectives add house_place trigger
 scoreboard objectives add house_buy trigger
 
-# 卖矿系统 - 货币计分板
-scoreboard objectives add mining_adventure_money dummy
-
 # 电力系统 - 触发
 scoreboard objectives add power_shop trigger
 scoreboard objectives add power_solar trigger

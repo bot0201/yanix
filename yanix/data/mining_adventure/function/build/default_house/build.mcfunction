@@ -3,18 +3,18 @@
 
 # 检查余额
 execute \
-    unless score @s mining_adventure_money matches 10.. \
+    unless score @s money matches 10.. \
     run tellraw @s [\
         {"text":"金币不足！","color":"red"},\
         {"text":" 需要 10 金币，当前余额：","color":"white"},\
-        {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"}\
+        {"score":{"name":"@s","objective":"money"},"color":"gold"}\
     ]
 execute \
-    unless score @s mining_adventure_money matches 10.. \
+    unless score @s money matches 10.. \
     run return fail
 
 # 扣款
-scoreboard players remove @s mining_adventure_money 10
+scoreboard players remove @s money 10
 
 # 通过指令放置结构
 place template minecraft:default_house 0 -60 0
@@ -49,6 +49,6 @@ tellraw @s [\
     {"text":" 花费了 ","color":"white"},\
     {"text":"10 金币","color":"gold"},\
     {"text":"，剩余：","color":"white"},\
-    {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"}\
+    {"score":{"name":"@s","objective":"money"},"color":"gold"}\
 ]
 playsound minecraft:block.wood.place player @s ~ ~ ~ 1 1

@@ -26,6 +26,7 @@ function mining_adventure:sell/trigger_handler
 
 # 空岛生存
 function skyblock:tick
+function skyblock:mode/dialog
 
 # ========================================
 # 对话框请求处理 (server 身份, /dialog 需要权限)

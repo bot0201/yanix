@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:confirmation",
+    "title": "选择游戏模式",
+    "yes": {
+        "label": "多人模式",
+        "action": {
+            "type": "minecraft:run_command",
+            "command": "trigger skyblock_mode set 2"
+        }
+    },
+    "no": {
+        "label": "单人模式",
+        "action": {
+            "type": "minecraft:run_command",
+            "command": "trigger skyblock_mode set 1"
+        }
+    }
+}

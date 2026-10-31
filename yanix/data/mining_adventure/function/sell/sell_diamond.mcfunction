@@ -17,7 +17,7 @@ scoreboard players operation #emerald_count tmp *= #3 const
 clear @s minecraft:diamond
 
 # 发放金币
-scoreboard players operation @s mining_adventure_money += #emerald_count tmp
+scoreboard players operation @s money += #emerald_count tmp
 
 # 成功提示
 tellraw @s [\
@@ -27,7 +27,7 @@ tellraw @s [\
     {"text":" 个钻石，获得了 ","color":"white"},\
     {"score":{"name":"#emerald_count","objective":"tmp"},"color":"gold"},\
     {"text":" 金币（余额：","color":"white"},\
-    {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"},\
+    {"score":{"name":"@s","objective":"money"},"color":"gold"},\
     {"text":"）","color":"white"}\
 ]
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 2

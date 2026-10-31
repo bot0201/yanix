@@ -7,7 +7,7 @@
 # ========================================
 
 # 扣款
-scoreboard players remove @s mining_adventure_money 10
+scoreboard players remove @s money 10
 
 # 层0: 3x3 石砖
 fill ~ ~1 ~ ~2 ~1 ~2 stone_bricks
@@ -42,6 +42,6 @@ tellraw @s [\
     {"text":" 花费了 ","color":"white"},\
     {"text":"10 金币","color":"gold"},\
     {"text":"，剩余：","color":"white"},\
-    {"score":{"name":"@s","objective":"mining_adventure_money"},"color":"gold"}\
+    {"score":{"name":"@s","objective":"money"},"color":"gold"}\
 ]
 playsound minecraft:block.anvil.place player @s ~ ~ ~ 1 1

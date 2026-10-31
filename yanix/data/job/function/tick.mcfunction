@@ -1,27 +1,27 @@
 # 刺客的隐身技能
 execute \
     if entity @a[tag=assassin_fighting,limit=1] \
-    run function job:assassin/skill_invis
+    run function job:job/assassin/skill_invis
 
 # 经典战士的无畏技能
 execute \
     if entity @a[tag=classic_soilder,limit=1] \
-    run function job:classic_soldier/classic_soldier_skill_fearless
+    run function job:job/classic_soldier/classic_soldier_skill_fearless
 
 # 刺客的秒杀技能
 execute \
     if entity @a[tag=assassin_fighting,limit=1] \
-    run function job:assassin/skill_one_shot
+    run function job:job/assassin/skill_one_shot
 
 # 爆破手的水晶箭
 execute \
     if entity @a[tag=demolition_fighting,limit=1] \
-    run function job:demolition/crystal_tick
+    run function job:job/demolition/crystal_tick
 
 # 弓箭手的tp箭
 execute \
     if entity @a[scores={used_bow=1..},limit=1] \
-    run function job:archer/tp_bow
+    run function job:job/archer/tp_bow
 
 # 启用职业trigger
 function job:trigger/enable_trigger

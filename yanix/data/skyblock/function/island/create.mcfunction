@@ -53,5 +53,5 @@ execute \
 function skyblock:island/build with storage skyblock:island
 function skyblock:island/tp with storage skyblock:island
 
-# 授予进度根
+# 授予根进度
 advancement grant @s only skyblock:root

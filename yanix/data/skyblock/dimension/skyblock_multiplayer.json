@@ -1,5 +1,5 @@
 {
-    "type": "skyblock:skyblock",
+    "type": "skyblock:skyblock_multiplayer",
     "generator": {
         "type": "minecraft:flat",
         "settings": {
@@ -9,7 +9,6 @@
                     "height": 1
                 }
             ],
-            "biome": "minecraft:plains",
             "features": false,
             "lakes": false,
             "structure_overrides": []

@@ -18,7 +18,7 @@
         {
           "score": {
             "name": "@s",
-            "objective": "mining_adventure_money"
+            "objective": "money"
           },
           "color": "gold"
         }
