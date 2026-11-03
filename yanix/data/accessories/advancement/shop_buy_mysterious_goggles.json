@@ -1,23 +1,23 @@
 {
   "criteria": {
-    "buy": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:lead",
-            "components": {
-              "minecraft:custom_data": {
-                "shop": "accessories",
-                "buy": "mysterious_goggles"
-              }
-            }
-          }
-        ]
-      }
-    }
+	"buy": {
+	  	"trigger": "minecraft:inventory_changed",
+	  	"conditions": {
+			"items": [
+			  	{
+					"items": "minecraft:lead",
+					"components": {
+					  	"minecraft:custom_data": {
+							"shop": "accessories",
+							"buy": "mysterious_goggles"
+					  	}
+					}
+			  	}
+			]
+	  	}
+	}
   },
   "rewards": {
-    "function": "accessories:shop/buy_mysterious_goggles"
+		"function": "accessories:shop/buy_mysterious_goggles"
   }
 }

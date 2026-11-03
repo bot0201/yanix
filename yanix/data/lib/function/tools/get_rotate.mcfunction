@@ -1,1 +1,0 @@
-$execute rotated as @s run $(cmd)

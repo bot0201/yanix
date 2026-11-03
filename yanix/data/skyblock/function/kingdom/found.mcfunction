@@ -38,6 +38,10 @@ execute \
     in skyblock:skyblock_multiplayer \
     run function skyblock:kingdom/core/place with storage skyblock:core
 
+# 分配uid
+scoreboard players operation @s kingdom_uid = #kingdom_uid_highest tmp
+scoreboard players add #kingdom_uid_highest tmp 1
+
 tellraw @a [\
     {"selector":"@s","color":"gold"},\
     {"text":" 建立了王国！核心已放置在岛屿中心。","color":"yellow"}\
