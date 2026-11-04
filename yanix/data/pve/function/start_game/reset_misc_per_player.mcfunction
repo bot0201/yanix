@@ -6,3 +6,7 @@ scoreboard players reset @s attach_grip
 scoreboard players reset @s attach_mag
 scoreboard players reset @s recursion_running_count
 scoreboard players reset @s pve_attach
+scoreboard players reset @s pve_survival_time
+scoreboard players reset @s pve_survival_time_s
+scoreboard players reset @s pve_survival_time_m
+scoreboard players reset @s pve_survival_time_h

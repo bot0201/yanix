@@ -3,6 +3,7 @@
 
 # ---- 重置所有玩家分数 ----
 scoreboard players set #pve horde 0
+scoreboard players set #pve time 0
 
 function pve:start_game/remove_tags
 
