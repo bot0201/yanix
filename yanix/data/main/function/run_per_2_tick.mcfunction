@@ -16,7 +16,7 @@ function job:tick
 execute \
     in minecraft:kitbattle \
     if entity @a[limit=1] \
-    run function job:advancement/reward/check_kills
+    run function job:advancement/condition/check_kills/main
 
 # 饰品 trigger 处理
 function accessories:trigger_handler
