@@ -7,4 +7,4 @@ execute \
 $scoreboard players set #summon_baby_zombie recursion_running_count $(babies)
 execute \
     if score #summon_baby_zombie recursion_running_count matches 1.. \
-    run function pve:spawn/baby_zombie/spawn_baby_zombie_per_player_entrance
+    run function pve:spawn/baby_zombie/start
