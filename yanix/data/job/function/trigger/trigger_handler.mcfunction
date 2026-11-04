@@ -1,3 +1,3 @@
 execute \
     as @a \
-    run function job:trigger_handler_child
+    run function job:trigger/trigger_handler_child
