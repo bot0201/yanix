@@ -9,5 +9,5 @@ execute \
     run schedule function lib:const/func_cmd_negative_batch 1t
 execute \
     unless score #const recursion_batch_count matches ..0 \
-    unless score #const recursion_running_count < #-2147483648 const \
+    if score #const recursion_running_count > #-2147483648 const \
     run function lib:const/func_cmd_negative
