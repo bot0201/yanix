@@ -31,7 +31,7 @@ execute \
         ]\
     }
 
-effect give @n[tag=dr_zomboss_2nd_generation_mech] speed infinite 2 true
-effect give @n[tag=dr_zomboss_2nd_generation_mech] resistance infinite 3 true
+effect give @e[tag=dr_zomboss_2nd_generation_mech,limit=1,sort=nearest,distance=..2] speed infinite 2 true
+effect give @e[tag=dr_zomboss_2nd_generation_mech,limit=1,sort=nearest,distance=..2] resistance infinite 3 true
 
 kill @s
