@@ -1,8 +1,8 @@
 # ============================================
 #  AWM 数值配置 — 修改此处即可调整全部参数
 # ============================================
-#  伤害      → 50       (shoot_recursion_child 硬编码，damage 不支持变量)
-#  射程      → 100 格   (shoot_recursion_child 硬编码)
+#  伤害      → 50       (_shoot_for_gun 宏参数)
+#  射程      → 100 格   (_shoot_for_gun 宏参数)
 #  弹匣容量  → 5 发     (shoot / reloaded)
 #  换弹时间  → 80 tick  (run_per_2_tick 硬编码，matches 不支持变量)
 #  栓动冷却  → 10×2tick (shoot / run_per_2_tick)

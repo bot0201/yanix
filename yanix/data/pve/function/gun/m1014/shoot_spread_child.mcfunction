@@ -59,7 +59,8 @@ scoreboard players set @e[tag=m1014_pellet,limit=1,sort=nearest] recursion_runni
 execute \
     as @e[tag=m1014_pellet,limit=1,sort=nearest] \
     at @s \
-    run function pve:gun/m1014/shoot_recursion_child
+    run function pve:gun/_shoot_recursion_for_gun \
+        {particle:"crit",damage:"3",damage_supp:"2",shooting_tag:"shooting_m1014",range:"25"}
 
 # 清理弹丸
 kill @e[tag=m1014_pellet,limit=1,sort=nearest]
