@@ -3,11 +3,11 @@ $particle $(particle) ~ ~ ~ 0 0 0 0 1 force
 
 # 伤害计算（消音器减伤）
 $execute \
-    if score #supp_active tmp matches 0 \
+    if score #supp_active db matches 0 \
     as @e[distance=..2,type=!player] \
     run damage @s $(damage) player_attack by @p[tag=$(shooting_tag)]
 $execute \
-    if score #supp_active tmp matches 1.. \
+    if score #supp_active db matches 1.. \
     as @e[distance=..2,type=!player] \
     run damage @s $(damage_supp) player_attack by @p[tag=$(shooting_tag)]
 

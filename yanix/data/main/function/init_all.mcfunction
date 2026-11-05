@@ -8,7 +8,7 @@ function lib:const/start
 gamerule respawn_radius 0
 
 # 初始化一般重要性且不需要单独建一个的虚拟玩家专用的分数板目标
-scoreboard objectives add tmp dummy
+scoreboard objectives add db dummy
 
 # 调用各个模块的初始化函数
 function pve:init

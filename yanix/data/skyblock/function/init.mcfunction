@@ -9,5 +9,5 @@ scoreboard objectives add kingdom_coin dummy
 scoreboard objectives add kingdom_level dummy
 scoreboard objectives add kingdom_join trigger
 scoreboard objectives add skyblock_core_lives dummy
-scoreboard players set #skyblock_next_id tmp 0
+scoreboard players set #skyblock_next_id db 0
 scoreboard objectives add kingdom_uid dummy

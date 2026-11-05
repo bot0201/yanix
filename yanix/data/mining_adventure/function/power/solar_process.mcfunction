@@ -5,7 +5,7 @@
 # ========================================
 function lib:tools/get_day_time
 execute \
-    if score daytime tmp matches 0..13000 \
+    if score daytime db matches 0..13000 \
     as @e[tag=solar_generator] \
     run function mining_adventure:power/solar_generate \
     with entity @s data

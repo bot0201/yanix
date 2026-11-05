@@ -30,19 +30,19 @@ execute \
     at @a[tag=grenade_thrower] \
     anchored eyes \
     positioned ^ ^ ^1 \
-    run summon marker ~ ~ ~ {Tags:["grenade_tmp"],NoGravity:1b}
+    run summon marker ~ ~ ~ {Tags:["grenade_db"],NoGravity:1b}
 
 # 5. 获取方向标记坐标（×100）
 execute \
-    as @e[tag=grenade_tmp,limit=1] \
+    as @e[tag=grenade_db,limit=1] \
     store result score #tgt_x grenade_math \
     run data get entity @s Pos[0] 100
 execute \
-    as @e[tag=grenade_tmp,limit=1] \
+    as @e[tag=grenade_db,limit=1] \
     store result score #tgt_y grenade_math \
     run data get entity @s Pos[1] 100
 execute \
-    as @e[tag=grenade_tmp,limit=1] \
+    as @e[tag=grenade_db,limit=1] \
     store result score #tgt_z grenade_math \
     run data get entity @s Pos[2] 100
 
@@ -90,5 +90,5 @@ execute \
     run scoreboard players set @s grenade_life 0
 
 # 11. 清理
-kill @e[tag=grenade_tmp]
+kill @e[tag=grenade_db]
 tag @a[tag=grenade_thrower] remove grenade_thrower

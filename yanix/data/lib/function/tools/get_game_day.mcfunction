@@ -1,1 +1,1 @@
-execute store result score #day tmp run time query day
+execute store result score #day db run time query day

@@ -5,7 +5,7 @@
 #       我就把这个玩意替换成目标物品
 
 $execute \
-    unless score #lock_slot tmp matches $(not_dos) \
+    unless score #lock_slot db matches $(not_dos) \
     as @a \
     if items entity @s container.$(recursion) $(id) \
     run item replace entity @s container.$(recursion) from entity @s hotbar.$(goal)

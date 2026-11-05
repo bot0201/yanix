@@ -7,8 +7,8 @@ execute \
     run return 0
 
 # ---- 消音器伤害标记 ----
-scoreboard players set #supp_active tmp 0
-execute if score @s attach_muzzle matches 1 run scoreboard players set #supp_active tmp 1
+scoreboard players set #supp_active db 0
+execute if score @s attach_muzzle matches 1 run scoreboard players set #supp_active db 1
 
 # 伤害归属标签
 tag @s add shooting_m1014
@@ -28,7 +28,7 @@ function pve:gun/m1014/shoot_spread_child
 tag @s remove shooting_m1014
 
 # 重置配件标记
-scoreboard players set #supp_active tmp 0
+scoreboard players set #supp_active db 0
 
 # 重置成就触发器（允许下一次射击）
 advancement revoke @s only pve:m1014_shoot

@@ -12,7 +12,7 @@
 # 用法: function lib:fx/cuboid with storage main:lib.fx.cuboid
 # ------------------------------------------------------------
 # step 支持的常用值: 0.125 | 0.2 | 0.25 | 0.5(默认) | 1.0
-# 若使用其他 step 值, 请预先设定 #lib_fx_step_inv tmp = round(1/step)
+# 若使用其他 step 值, 请预先设定 #lib_fx_step_inv db = round(1/step)
 # ------------------------------------------------------------
 # 示例:
 #   data modify storage main:lib.fx.cuboid set value \
@@ -44,117 +44,117 @@ execute unless data storage main:lib.fx.cuboid z2 \
 # ============================================================
 # 步长倍数 inv = 1/step (每块粒子数)
 # ============================================================
-scoreboard players set #lib_fx_step_inv tmp 2
+scoreboard players set #lib_fx_step_inv db 2
 execute \
     if data storage main:lib.fx.cuboid {step:1.0d} \
-    run scoreboard players set #lib_fx_step_inv tmp 1
+    run scoreboard players set #lib_fx_step_inv db 1
 execute \
     if data storage main:lib.fx.cuboid {step:0.25d} \
-    run scoreboard players set #lib_fx_step_inv tmp 4
+    run scoreboard players set #lib_fx_step_inv db 4
 execute \
     if data storage main:lib.fx.cuboid {step:0.2d} \
-    run scoreboard players set #lib_fx_step_inv tmp 5
+    run scoreboard players set #lib_fx_step_inv db 5
 execute \
     if data storage main:lib.fx.cuboid {step:0.125d} \
-    run scoreboard players set #lib_fx_step_inv tmp 8
+    run scoreboard players set #lib_fx_step_inv db 8
 
 # ============================================================
 # X 轴: 归一化 + 计算步数
 # ============================================================
-execute store result score #lib_fx_v1 tmp \
+execute store result score #lib_fx_v1 db \
     run data get storage main:lib.fx.cuboid x1
-execute store result score #lib_fx_v2 tmp \
+execute store result score #lib_fx_v2 db \
     run data get storage main:lib.fx.cuboid x2
 
 # 确保 storage 中 x1 <= x2 (score 计算 min/max 后写回)
-scoreboard players operation #lib_fx_min tmp = #lib_fx_v1 tmp
-scoreboard players operation #lib_fx_max tmp = #lib_fx_v2 tmp
+scoreboard players operation #lib_fx_min db = #lib_fx_v1 db
+scoreboard players operation #lib_fx_max db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_min tmp = #lib_fx_v2 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_min db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_max tmp = #lib_fx_v1 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_max db = #lib_fx_v1 db
 execute store result storage main:lib.fx.cuboid x1 double 1 \
-    run scoreboard players get #lib_fx_min tmp
+    run scoreboard players get #lib_fx_min db
 execute store result storage main:lib.fx.cuboid x2 double 1 \
-    run scoreboard players get #lib_fx_max tmp
+    run scoreboard players get #lib_fx_max db
 
 # 重新读取 (此时 x1 <= x2)
-scoreboard players operation #lib_fx_v1 tmp = #lib_fx_min tmp
-scoreboard players operation #lib_fx_v2 tmp = #lib_fx_max tmp
+scoreboard players operation #lib_fx_v1 db = #lib_fx_min db
+scoreboard players operation #lib_fx_v2 db = #lib_fx_max db
 
 # 长度 = v2 - v1
-scoreboard players operation #lib_fx_v2 tmp -= #lib_fx_v1 tmp
+scoreboard players operation #lib_fx_v2 db -= #lib_fx_v1 db
 
 # 步数 = 长度 * inv
-scoreboard players operation #lib_fx_steps_x tmp = #lib_fx_v2 tmp
-scoreboard players operation #lib_fx_steps_x tmp *= #lib_fx_step_inv tmp
+scoreboard players operation #lib_fx_steps_x db = #lib_fx_v2 db
+scoreboard players operation #lib_fx_steps_x db *= #lib_fx_step_inv db
 execute \
-    if score #lib_fx_steps_x tmp matches 0 \
-    run scoreboard players set #lib_fx_steps_x tmp 1
+    if score #lib_fx_steps_x db matches 0 \
+    run scoreboard players set #lib_fx_steps_x db 1
 
 # ============================================================
 # Y 轴: 归一化 + 计算步数
 # ============================================================
-execute store result score #lib_fx_v1 tmp \
+execute store result score #lib_fx_v1 db \
     run data get storage main:lib.fx.cuboid y1
-execute store result score #lib_fx_v2 tmp \
+execute store result score #lib_fx_v2 db \
     run data get storage main:lib.fx.cuboid y2
 
-scoreboard players operation #lib_fx_min tmp = #lib_fx_v1 tmp
-scoreboard players operation #lib_fx_max tmp = #lib_fx_v2 tmp
+scoreboard players operation #lib_fx_min db = #lib_fx_v1 db
+scoreboard players operation #lib_fx_max db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_min tmp = #lib_fx_v2 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_min db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_max tmp = #lib_fx_v1 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_max db = #lib_fx_v1 db
 execute store result storage main:lib.fx.cuboid y1 double 1 \
-    run scoreboard players get #lib_fx_min tmp
+    run scoreboard players get #lib_fx_min db
 execute store result storage main:lib.fx.cuboid y2 double 1 \
-    run scoreboard players get #lib_fx_max tmp
+    run scoreboard players get #lib_fx_max db
 
-scoreboard players operation #lib_fx_v1 tmp = #lib_fx_min tmp
-scoreboard players operation #lib_fx_v2 tmp = #lib_fx_max tmp
+scoreboard players operation #lib_fx_v1 db = #lib_fx_min db
+scoreboard players operation #lib_fx_v2 db = #lib_fx_max db
 
-scoreboard players operation #lib_fx_v2 tmp -= #lib_fx_v1 tmp
-scoreboard players operation #lib_fx_steps_y tmp = #lib_fx_v2 tmp
-scoreboard players operation #lib_fx_steps_y tmp *= #lib_fx_step_inv tmp
+scoreboard players operation #lib_fx_v2 db -= #lib_fx_v1 db
+scoreboard players operation #lib_fx_steps_y db = #lib_fx_v2 db
+scoreboard players operation #lib_fx_steps_y db *= #lib_fx_step_inv db
 execute \
-    if score #lib_fx_steps_y tmp matches 0 \
-    run scoreboard players set #lib_fx_steps_y tmp 1
+    if score #lib_fx_steps_y db matches 0 \
+    run scoreboard players set #lib_fx_steps_y db 1
 
 # ============================================================
 # Z 轴: 归一化 + 计算步数
 # ============================================================
-execute store result score #lib_fx_v1 tmp \
+execute store result score #lib_fx_v1 db \
     run data get storage main:lib.fx.cuboid z1
-execute store result score #lib_fx_v2 tmp \
+execute store result score #lib_fx_v2 db \
     run data get storage main:lib.fx.cuboid z2
 
-scoreboard players operation #lib_fx_min tmp = #lib_fx_v1 tmp
-scoreboard players operation #lib_fx_max tmp = #lib_fx_v2 tmp
+scoreboard players operation #lib_fx_min db = #lib_fx_v1 db
+scoreboard players operation #lib_fx_max db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_min tmp = #lib_fx_v2 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_min db = #lib_fx_v2 db
 execute \
-    if score #lib_fx_v1 tmp > #lib_fx_v2 tmp \
-    run scoreboard players operation #lib_fx_max tmp = #lib_fx_v1 tmp
+    if score #lib_fx_v1 db > #lib_fx_v2 db \
+    run scoreboard players operation #lib_fx_max db = #lib_fx_v1 db
 execute store result storage main:lib.fx.cuboid z1 double 1 \
-    run scoreboard players get #lib_fx_min tmp
+    run scoreboard players get #lib_fx_min db
 execute store result storage main:lib.fx.cuboid z2 double 1 \
-    run scoreboard players get #lib_fx_max tmp
+    run scoreboard players get #lib_fx_max db
 
-scoreboard players operation #lib_fx_v1 tmp = #lib_fx_min tmp
-scoreboard players operation #lib_fx_v2 tmp = #lib_fx_max tmp
+scoreboard players operation #lib_fx_v1 db = #lib_fx_min db
+scoreboard players operation #lib_fx_v2 db = #lib_fx_max db
 
-scoreboard players operation #lib_fx_v2 tmp -= #lib_fx_v1 tmp
-scoreboard players operation #lib_fx_steps_z tmp = #lib_fx_v2 tmp
-scoreboard players operation #lib_fx_steps_z tmp *= #lib_fx_step_inv tmp
+scoreboard players operation #lib_fx_v2 db -= #lib_fx_v1 db
+scoreboard players operation #lib_fx_steps_z db = #lib_fx_v2 db
+scoreboard players operation #lib_fx_steps_z db *= #lib_fx_step_inv db
 execute \
-    if score #lib_fx_steps_z tmp matches 0 \
-    run scoreboard players set #lib_fx_steps_z tmp 1
+    if score #lib_fx_steps_z db matches 0 \
+    run scoreboard players set #lib_fx_steps_z db 1
 
 # ============================================================
 # 拷贝公共参数到 line storage
@@ -170,25 +170,25 @@ data modify storage main:lib.fx.cuboid.line dy set value 0.0d
 data modify storage main:lib.fx.cuboid.line dz set value 0.0d
 
 # 边1: (x1, y1, z1) → (x2, y1, z1)  底前
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_x db
 $execute \
     positioned $(x1) $(y1) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边2: (x1, y2, z1) → (x2, y2, z1)  顶前
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_x db
 $execute \
     positioned $(x1) $(y2) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边3: (x1, y1, z2) → (x2, y1, z2)  底后
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_x db
 $execute \
     positioned $(x1) $(y1) $(z2) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边4: (x1, y2, z2) → (x2, y2, z2)  顶后
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_x tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_x db
 $execute \
     positioned $(x1) $(y2) $(z2) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
@@ -201,25 +201,25 @@ $data modify storage main:lib.fx.cuboid.line dy set value $(step)
 data modify storage main:lib.fx.cuboid.line dz set value 0.0d
 
 # 边5: (x1, y1, z1) → (x1, y2, z1)  左前
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_y db
 $execute \
     positioned $(x1) $(y1) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边6: (x2, y1, z1) → (x2, y2, z1)  右前
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_y db
 $execute \
     positioned $(x2) $(y1) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边7: (x1, y1, z2) → (x1, y2, z2)  左后
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_y db
 $execute \
     positioned $(x1) $(y1) $(z2) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边8: (x2, y1, z2) → (x2, y2, z2)  右后
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_y tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_y db
 $execute \
     positioned $(x2) $(y1) $(z2) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
@@ -232,25 +232,25 @@ data modify storage main:lib.fx.cuboid.line dy set value 0.0d
 $data modify storage main:lib.fx.cuboid.line dz set value $(step)
 
 # 边9:  (x1, y1, z1) → (x1, y1, z2)  底左
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_z db
 $execute \
     positioned $(x1) $(y1) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边10: (x2, y1, z1) → (x2, y1, z2)  底右
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_z db
 $execute \
     positioned $(x2) $(y1) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边11: (x1, y2, z1) → (x1, y2, z2)  顶左
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_z db
 $execute \
     positioned $(x1) $(y2) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line
 
 # 边12: (x2, y2, z1) → (x2, y2, z2)  顶右
-scoreboard players operation #lib_fx_cuboid_steps tmp = #lib_fx_steps_z tmp
+scoreboard players operation #lib_fx_cuboid_steps db = #lib_fx_steps_z db
 $execute \
     positioned $(x2) $(y2) $(z1) \
     run function lib:fx/cuboid/line with storage main:lib.fx.cuboid.line

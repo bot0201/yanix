@@ -1,1 +1,1 @@
-execute store result score #entity_count tmp if entity @e
+execute store result score #entity_count db if entity @e

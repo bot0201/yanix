@@ -34,19 +34,19 @@ execute \
     at @a[tag=mag_thrower] \
     anchored eyes \
     positioned ^ ^ ^1 \
-    run summon marker ~ ~ ~ {Tags:["mag_tmp"],NoGravity:1b}
+    run summon marker ~ ~ ~ {Tags:["mag_db"],NoGravity:1b}
 
 # 5. 获取方向标记坐标（×100）
 execute \
-    as @e[tag=mag_tmp,limit=1] \
+    as @e[tag=mag_db,limit=1] \
     store result score #tgt_x magnetic_math \
     run data get entity @s Pos[0] 100
 execute \
-    as @e[tag=mag_tmp,limit=1] \
+    as @e[tag=mag_db,limit=1] \
     store result score #tgt_y magnetic_math \
     run data get entity @s Pos[1] 100
 execute \
-    as @e[tag=mag_tmp,limit=1] \
+    as @e[tag=mag_db,limit=1] \
     store result score #tgt_z magnetic_math \
     run data get entity @s Pos[2] 100
 
@@ -99,5 +99,5 @@ execute \
     run playsound minecraft:block.anvil.land master @a ~ ~ ~ 0.5 0.5
 
 # 12. 清理
-kill @e[tag=mag_tmp]
+kill @e[tag=mag_db]
 tag @a[tag=mag_thrower] remove mag_thrower

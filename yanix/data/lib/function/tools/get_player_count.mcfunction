@@ -1,1 +1,1 @@
-execute store result score player_count tmp if entity @a
+execute store result score player_count db if entity @a

@@ -7,28 +7,28 @@ execute \
     run return fail
 
 # 计算扩张费用 = 10 + (当前等级 - 1) × 5
-scoreboard players operation #sb_expand_cost tmp = @s kingdom_level
-scoreboard players operation #sb_expand_cost tmp -= #1 const
-scoreboard players operation #sb_expand_cost tmp *= #5 const
-scoreboard players operation #sb_expand_cost tmp += #10 const
+scoreboard players operation #sb_expand_cost db = @s kingdom_level
+scoreboard players operation #sb_expand_cost db -= #1 const
+scoreboard players operation #sb_expand_cost db *= #5 const
+scoreboard players operation #sb_expand_cost db += #10 const
 
 # 检查王国币是否足够
 execute \
-    unless score @s kingdom_coin >= #sb_expand_cost tmp \
+    unless score @s kingdom_coin >= #sb_expand_cost db \
     run tellraw @s [\
         {"text":"王国币不足！扩张到等级 ","color":"red"},\
         {"text":"需 ","color":"white"},\
-        {"score":{"name":"#sb_expand_cost","objective":"tmp"},"color":"gold"},\
+        {"score":{"name":"#sb_expand_cost","objective":"db"},"color":"gold"},\
         {"text":" 王国币（余额：","color":"white"},\
         {"score":{"name":"@s","objective":"kingdom_coin"},"color":"gold"},\
         {"text":"）","color":"white"}\
     ]
 execute \
-    unless score @s kingdom_coin >= #sb_expand_cost tmp \
+    unless score @s kingdom_coin >= #sb_expand_cost db \
     run return fail
 
 # 扣除王国币
-scoreboard players operation @s kingdom_coin -= #sb_expand_cost tmp
+scoreboard players operation @s kingdom_coin -= #sb_expand_cost db
 
 # 升级
 scoreboard players add @s kingdom_level 1

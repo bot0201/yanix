@@ -9,9 +9,9 @@ $execute if score @s $(owns_score) matches 1 run tellraw @s [{"text":"你已拥�
 $execute if score @s $(owns_score) matches 1 run return fail
 
 # 检查绿宝石余额
-execute store result score #shop tmp run clear @s minecraft:emerald 0
-execute unless score #shop tmp matches 3.. run tellraw @s [{"text":"绿宝石不足！需要 3 个绿宝石","color":"red"}]
-execute unless score #shop tmp matches 3.. run return fail
+execute store result score #shop db run clear @s minecraft:emerald 0
+execute unless score #shop db matches 3.. run tellraw @s [{"text":"绿宝石不足！需要 3 个绿宝石","color":"red"}]
+execute unless score #shop db matches 3.. run return fail
 
 # 扣除 3 个绿宝石
 clear @s minecraft:emerald 3

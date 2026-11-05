@@ -6,25 +6,25 @@
 # ========================================
 
 # 递增 tick 计数器
-scoreboard players add #power_tick tmp 1
+scoreboard players add #power_tick db 1
 
 # ========================================
 # 太阳能发电机: 每 14 tick 处理一次 (~0.7秒)
 # ========================================
 execute \
-    if score #power_tick tmp >= #14 const \
+    if score #power_tick db >= #14 const \
     run function mining_adventure:power/solar_process
 execute \
-    if score #power_tick tmp >= #14 const \
-    run scoreboard players set #power_tick tmp 0
+    if score #power_tick db >= #14 const \
+    run scoreboard players set #power_tick db 0
 
 # ========================================
 # 自动采矿机: 使用单独计数器，每 7 tick 处理 (~0.35秒)
 # ========================================
-scoreboard players add #mining_tick tmp 1
+scoreboard players add #mining_tick db 1
 execute \
-    if score #mining_tick tmp >= #7 const \
+    if score #mining_tick db >= #7 const \
     run function mining_adventure:power/mining_process
 execute \
-    if score #mining_tick tmp >= #7 const \
-    run scoreboard players set #mining_tick tmp 0
+    if score #mining_tick db >= #7 const \
+    run scoreboard players set #mining_tick db 0

@@ -14,7 +14,7 @@ execute \
     unless score @s money matches 10.. \
     run return fail
 
-scoreboard players set #power_ray_dist tmp 0
+scoreboard players set #power_ray_dist db 0
 execute \
     anchored eyes \
     positioned ^ ^ ^ \

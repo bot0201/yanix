@@ -1,1 +1,1 @@
-execute store result score gametime tmp run time query gametime
+execute store result score gametime db run time query gametime

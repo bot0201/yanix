@@ -1,1 +1,1 @@
-execute store result score daytime tmp run time query daytime
+execute store result score daytime db run time query daytime

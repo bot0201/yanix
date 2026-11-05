@@ -1,19 +1,19 @@
 execute \
     store result score #pve random \
     run random value 1..359
+execute \
+    as @r[tag=gaming_pve] \
+    at @s \
+    if dimension minecraft:pve \
+    run summon minecraft:marker ~ ~ ~ {\
+    Tags:[\
+        "candidate"\
+    ],\
+    NoGravity:1b\
+}
 
 execute \
-    if score #pve random matches ..349 \
-    run tag @s add invalid
-
-scoreboard players operation @s count = #pve random
-
-execute \
-    if score @s random matches 0 \
-    run tag @s add invalid
-
-execute \
-    unless entity @s[tag=invalid] \
+    as @e[type=marker,tag=candidate] \
     run function pve:spawn/bosses/dr_zomboss_2nd_generation_mech/spawn_child
 
 scoreboard players remove #summon_zombie recursion_running_count 1

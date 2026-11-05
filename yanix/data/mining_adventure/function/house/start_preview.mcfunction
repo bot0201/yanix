@@ -3,7 +3,7 @@
 # 从玩家视线方向发射射线，找到目标方块
 # ========================================
 
-scoreboard players set #house_ray_dist tmp 0
+scoreboard players set #house_ray_dist db 0
 execute \
     anchored eyes \
     positioned ^ ^ ^ \

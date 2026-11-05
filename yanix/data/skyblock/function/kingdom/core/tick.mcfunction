@@ -4,13 +4,13 @@ execute \
     run return 0
 
 # 计算岛屿中心 X = 岛屿ID × 1000
-scoreboard players operation #sb_core_cx tmp = @s skyblock_island
-scoreboard players operation #sb_core_cx tmp *= #1000 const
+scoreboard players operation #sb_core_cx db = @s skyblock_island
+scoreboard players operation #sb_core_cx db *= #1000 const
 
 # 写入 storage
 execute \
     store result storage skyblock:core x int 1 \
-    run scoreboard players get #sb_core_cx tmp
+    run scoreboard players get #sb_core_cx db
 data modify storage skyblock:core y set value 100
 data modify storage skyblock:core z set value 0
 

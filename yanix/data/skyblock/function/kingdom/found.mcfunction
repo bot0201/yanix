@@ -27,11 +27,11 @@ scoreboard players set @s kingdom_level 1
 tag @s add has_kingdom
 
 # 计算岛屿中心并放置核心
-scoreboard players operation #sb_core_cx tmp = @s skyblock_island
-scoreboard players operation #sb_core_cx tmp *= #1000 const
+scoreboard players operation #sb_core_cx db = @s skyblock_island
+scoreboard players operation #sb_core_cx db *= #1000 const
 execute \
     store result storage skyblock:core x int 1 \
-    run scoreboard players get #sb_core_cx tmp
+    run scoreboard players get #sb_core_cx db
 data modify storage skyblock:core y set value 100
 data modify storage skyblock:core z set value 0
 execute \
@@ -39,8 +39,8 @@ execute \
     run function skyblock:kingdom/core/place with storage skyblock:core
 
 # 分配uid
-scoreboard players operation @s kingdom_uid = #kingdom_uid_highest tmp
-scoreboard players add #kingdom_uid_highest tmp 1
+scoreboard players operation @s kingdom_uid = #kingdom_uid_highest db
+scoreboard players add #kingdom_uid_highest db 1
 
 tellraw @a [\
     {"selector":"@s","color":"gold"},\
