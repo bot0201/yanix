@@ -7,6 +7,9 @@ function lib:const/start
 # 防止玩家重生到其他位置
 gamerule respawn_radius 0
 
+# 兼容性：清理旧版本遗留计分板
+function main:compat/cleanup_old_scoreboards
+
 # 初始化一般重要性且不需要单独建一个的虚拟玩家专用的分数板目标
 scoreboard objectives add db dummy
 
