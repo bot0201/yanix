@@ -30,6 +30,7 @@
     *   5发弹匣，4秒换弹，1秒（栓动）射速
     *   **开镜（ADS）系统**：切换视角模型、降低移速、增强稳定性。
 *   **枪型路由系统**：枪械逻辑按 `m4a1` / `m1014` / `awm` 分文件夹独立管理，道具使用 `custom_data` 区分。
+*   可以通过修改各个枪械的`shoot.mcfunction`来快速、直观、方便地修改数值。
 
 ## 📋 前置依赖
 - 需要服务端安装 [Multiverse-Core](https://www.spigotmc.org/resources/multiverse-core.64450) 插件（用于 `mining_adventure` 模式地皮与PVE等地图）。
