@@ -10,6 +10,8 @@ scoreboard objectives add grenade_math dummy
 
 scoreboard objectives add boss1_spawned dummy
 scoreboard objectives add boss1_check dummy
+scoreboard objectives add boss2_spawned dummy
+scoreboard objectives add boss2_check dummy
 
 function pve:gun/init
 function pve:gun/attach/init

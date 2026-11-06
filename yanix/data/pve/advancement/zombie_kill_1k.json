@@ -26,5 +26,5 @@
     "rewards": {
         "function": "pve:advancement/zombie_kill_1k"
     },
-    "parent": "pve:zombie_kill_100"
+    "parent": "pve:zombie_kill_500"
 }

@@ -8,6 +8,7 @@ scoreboard objectives add attach_grip dummy
 scoreboard objectives add bullet_m4a1 dummy
 scoreboard objectives add magazine_m4a1 dummy
 scoreboard objectives add magazine_old_m4a1 dummy
+scoreboard objectives add m4a1_cooldown dummy
 
 # M1014
 scoreboard objectives add bullet_m1014 dummy
