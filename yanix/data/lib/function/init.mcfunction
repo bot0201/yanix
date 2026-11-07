@@ -1,5 +1,6 @@
 scoreboard objectives add item_count dummy
 scoreboard objectives add density dummy
-scoreboard objectives add soft_banned dummy "软封禁时间"
-scoreboard objectives add soft_banned_s dummy "软封禁时间(秒)"
 scoreboard objectives add lib_fx_cuboid_steps dummy
+
+function lib:fast_func/soft_ban/init
+function lib:const/init

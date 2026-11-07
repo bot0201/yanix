@@ -26,3 +26,6 @@ function misc:online_time/online_time
 
 # 注册
 function main:users/reg_check
+
+# 扫地机
+function lib:fast_func/toggle_item_cleaner/handler

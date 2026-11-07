@@ -1,0 +1,2 @@
+scoreboard objectives add recursion_batch_count dummy
+scoreboard objectives add recursion_running_count dummy
