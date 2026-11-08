@@ -1,37 +1,5 @@
-execute \
-    store result entity @s Rotation[0] float 1 \
-    run scoreboard players get #pve random
-
-tp @s ^ ^ ^12
-
-execute store result score @s count if entity @a[distance=..11.99,tag=gaming_pve]
-
-execute \
-    if score @s count matches 1.. \
-    run tag @s add invalid
-
-scoreboard players set @s count 0
-
-execute store result score @s count if entity @a[distance=11.99..12.01,tag=gaming_pve]
-
-execute \
-    if score @s count matches ..0 \
-    run tag @s add invalid
-
-execute \
-   if score @s count matches 2.. \
-    run tag @s add invalid
-
-execute \
-    unless entity @s[tag=invalid] \
-    run summon warden ~ ~ ~ {\
-        CustomName:"僵王博士的第二代机甲",\
-        Tags:[\
-            "dr_zomboss_2nd_generation_mech"\
-        ]\
-    }
-
+# 僵王博士的第二代机甲 - 召唤子实体
+function pve:spawn/bosses/_spawn_child {boss_name:"僵王博士的第二代机甲",boss_tag:"dr_zomboss_2nd_generation_mech"}
 effect give @e[tag=dr_zomboss_2nd_generation_mech,limit=1,sort=nearest,distance=..2] speed infinite 2 true
 effect give @e[tag=dr_zomboss_2nd_generation_mech,limit=1,sort=nearest,distance=..2] resistance infinite 3 true
-
 kill @s

@@ -1,32 +1,4 @@
 # ========================================
 # 出售粗金 - 1 粗金 = 1 金币
 # ========================================
-
-# 计算玩家背包中的粗金数量
-execute store result score #ore_count db run clear @s minecraft:raw_gold 0
-
-# 如果没有粗金则提示并退出
-execute if score #ore_count db matches 0 run tellraw @s [{"text":"你的背包中没有粗金可出售！","color":"red"}]
-execute if score #ore_count db matches 0 run return fail
-
-# 1 粗金 = 1 金币，直接复制
-scoreboard players operation #emerald_count db = #ore_count db
-
-# 清除所有粗金
-clear @s minecraft:raw_gold
-
-# 发放金币
-scoreboard players operation @s money += #emerald_count db
-
-# 成功提示
-tellraw @s [\
-    {"text":"出售成功！","color":"green"},\
-    {"text":" 出售了 ","color":"white"},\
-    {"score":{"name":"#ore_count","objective":"db"},"color":"gold"},\
-    {"text":" 个粗金，获得了 ","color":"white"},\
-    {"score":{"name":"#emerald_count","objective":"db"},"color":"gold"},\
-    {"text":" 金币（余额：","color":"white"},\
-    {"score":{"name":"@s","objective":"money"},"color":"gold"},\
-    {"text":"）","color":"white"}\
-]
-playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 2
+function mining_adventure:sell/_do_sell {item:"minecraft:raw_gold",name:"粗金",color:"gold",mode:"2",operand:"1",zero_msg:""}
