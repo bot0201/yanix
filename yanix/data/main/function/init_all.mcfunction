@@ -7,7 +7,8 @@ function lib:const/start
 # 防止玩家重生到其他位置
 gamerule respawn_radius 0
 
-# 兼容性：清理旧版本遗留计分板
+# 兼容性：迁移旧版本数据 → 清理旧版本遗留计分板
+function main:compat/migrate
 function main:compat/cleanup_old_scoreboards
 
 # 初始化一般重要性且不需要单独建一个的虚拟玩家专用的分数板目标
@@ -21,6 +22,12 @@ scoreboard players set #version db 0
 scoreboard players set #1 v 0
 scoreboard players set #2 v 0
 scoreboard players set #3 v 1
+
+# 版本查询 trigger（玩家 /trigger version set 1）
+scoreboard objectives add version trigger
+
+# 版本查询 显示
+scoreboard players set @a version 1
 
 # 调用各个模块的初始化函数
 function pve:init
