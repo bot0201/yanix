@@ -5,7 +5,7 @@ scoreboard objectives add attach_scope dummy
 scoreboard objectives add attach_grip dummy
 
 # 配件常量
-function gun:_const
+function pve:gun/_const
 
 # M4A1
 scoreboard objectives add bullet_m4a1 dummy

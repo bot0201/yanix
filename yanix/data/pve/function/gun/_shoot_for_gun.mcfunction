@@ -12,8 +12,8 @@ $execute \
 # ---- 冷却设置 ----
 $scoreboard players set @s $(cooldown_score) $(cooldown_value)
 
-# ---- 后座力（委托给枪械专属函数） ----
-$function $(recoil_func)
+# ---- 后座力（无后座标签跳过） ----
+$execute unless entity @s[tag=no_recoil] run function $(recoil_func)
 
 # ---- 消音器伤害标记 ----
 scoreboard players set #supp_active db 0
@@ -36,12 +36,11 @@ $execute \
     unless score @s attach_muzzle matches 1 \
     run playsound $(sound_unsupp) player @s ~ ~ ~ $(sound_unsupp_vol) $(sound_unsupp_pitch)
 
-# 射线
-execute \
+# 射线（委托给枪械专属函数）
+$execute \
     rotated as @s \
     anchored eyes \
-    run function pve:gun/_shoot_recursion_for_gun \
-        {particle:"$(particle)",damage:"$(damage)",damage_supp:"$(damage_supp)",shooting_tag:"$(shooting_tag)",range:"$(range)"}
+    run function $(ray_func)
 
 # 移除伤害归属标签
 $tag @s remove $(shooting_tag)

@@ -1,9 +1,2 @@
-scoreboard players add @s time 1
-execute \
-    if score @s time matches 80 \
-    unless score @s attach_mag matches 2 \
-    run function pve:gun/awm/reloaded
-execute \
-    if score @s time matches 55 \
-    if score @s attach_mag matches 2 \
-    run function pve:gun/awm/reloaded
+function pve:gun/_reload_tick_for_gun \
+    {gun_id:"awm",normal_time:"80",quick_time:"55"}

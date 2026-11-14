@@ -8,7 +8,8 @@ function pve:gun/attach/apply_offhand
 function pve:gun/_reload_for_gun \
     {holding_tag:"holding_m4a1", gun_id:"m4a1", \
         mag_score:"magazine_m4a1", mag_max:"30", mag_max_extended:"40", \
-        bullet_score:"bullet_m4a1", reload_handler:"pve:gun/m4a1/reload_handler"}
+        bullet_score:"bullet_m4a1", \
+        reload_handler:"pve:gun/_reload_handler {reloading_tag:\"reloading_m4a1\"}"}
 function pve:gun/_reload_for_gun \
     {holding_tag:"holding_m1014", gun_id:"m1014", \
         mag_score:"magazine_m1014", mag_max:"8", mag_max_extended:"10", \
@@ -16,8 +17,10 @@ function pve:gun/_reload_for_gun \
 function pve:gun/_reload_for_gun \
     {holding_tag:"holding_awm", gun_id:"awm", \
         mag_score:"magazine_awm", mag_max:"5", mag_max_extended:"7", \
-        bullet_score:"bullet_awm", reload_handler:"pve:gun/awm/reload_handler"}
+        bullet_score:"bullet_awm", \
+        reload_handler:"pve:gun/_reload_handler {reloading_tag:\"reloading_awm\"}"}
 function pve:gun/_reload_for_gun \
     {holding_tag:"holding_m2", gun_id:"m2", \
         mag_score:"magazine_m2", mag_max:"100", mag_max_extended:"120", \
-        bullet_score:"bullet_m2", reload_handler:"pve:gun/m2/reload_handler"}
+        bullet_score:"bullet_m2", \
+        reload_handler:"pve:gun/_reload_handler {reloading_tag:\"reloading_m2\"}"}

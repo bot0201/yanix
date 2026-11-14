@@ -13,11 +13,11 @@ playsound minecraft:block.note_block.hat player @s ~ ~ ~ 1 1.5
 # 弹匣已满 → 结束
 execute \
     if score @s magazine_m1014 matches 8.. \
-    unless score @s attach_mag matches 1 \
+    unless score @s attach_mag = #mag_extended const \
     run function pve:gun/m1014/reloaded
 execute \
     if score @s magazine_m1014 matches 10.. \
-    if score @s attach_mag matches 1 \
+    if score @s attach_mag = #mag_extended const \
     run function pve:gun/m1014/reloaded
 
 # 备弹耗尽 → 结束

@@ -11,9 +11,6 @@ function pve:gun/_shoot_for_gun \
         sound_unsupp:"minecraft:entity.warden.sonic_boom",\
         sound_unsupp_vol:"0.5",\
         sound_unsupp_pitch:"0.6",\
-        particle:"smoke",\
-        damage:"20",\
-        damage_supp:"18",\
-        range:"80",\
-        advancement:"pve:m2_shoot"\
+        advancement:"pve:m2_shoot",\
+        ray_func:"pve:gun/_shoot_recursion_for_gun {particle:\"smoke\",damage:\"20\",damage_supp:\"18\",shooting_tag:\"shooting_m2\",range:\"80\"}"\
     }

@@ -11,9 +11,6 @@ function pve:gun/_shoot_for_gun \
         sound_unsupp:"pve:m4a1_shoot_silence",\
         sound_unsupp_vol:"1",\
         sound_unsupp_pitch:"1",\
-        particle:"smoke",\
-        damage:"10",\
-        damage_supp:"8",\
-        range:"50",\
-        advancement:"pve:m4a1_shoot"\
+        advancement:"pve:m4a1_shoot",\
+        ray_func:"pve:gun/_shoot_recursion_for_gun {particle:\"smoke\",damage:\"10\",damage_supp:\"8\",shooting_tag:\"shooting_m4a1\",range:\"50\"}"\
     }
