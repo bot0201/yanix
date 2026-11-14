@@ -29,3 +29,9 @@ function main:users/reg_check
 
 # 扫地机
 function lib:fast_func/toggle_item_cleaner/handler
+
+# 附属数据包 API：每 3 tick 钩子
+function #main:affiliated/tick_3
+
+# 附属数据包 API：每 3 tick 钩子
+function #main:affiliated/tick_3

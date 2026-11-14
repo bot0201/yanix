@@ -44,3 +44,9 @@ function mining_adventure:sell/dialog
 function main:snowball_menu/dialog
 function main:snowball_menu/trigger_handler
 function main:version/trigger_handler
+
+# 附属数据包 API：每 2 tick 钩子
+function #main:affiliated/tick_2
+
+# 附属数据包 API：每 2 tick 钩子
+function #main:affiliated/tick_2
