@@ -43,6 +43,3 @@ function skyblock:init
 
 # 附属数据包 API：初始化钩子
 function #main:affiliated/init
-
-# 附属数据包 API：初始化钩子
-function #main:affiliated/init

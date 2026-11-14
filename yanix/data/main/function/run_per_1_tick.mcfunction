@@ -18,6 +18,3 @@ function mining_adventure:power/tick
 
 # 附属数据包 API：每 tick 钩子
 function #main:affiliated/tick_1
-
-# 附属数据包 API：每 tick 钩子
-function #main:affiliated/tick_1
