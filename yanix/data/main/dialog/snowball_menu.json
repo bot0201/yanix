@@ -18,14 +18,6 @@
     ],
     "actions": [
         {
-            "label": {"text": "测试: 发送消息", "color": "green"},
-            "tooltip": {"text": "向自己发送一条测试消息"},
-            "action": {
-                "type": "minecraft:run_command",
-                "command": "trigger test_msg set 1"
-            }
-        },
-        {
             "label": {"text": "测试: 显示余额", "color": "gold"},
             "tooltip": {"text": "查看当前金币余额"},
             "action": {
@@ -39,6 +31,14 @@
             "action": {
                 "type": "minecraft:run_command",
                 "command": "trigger test_get_snowball set 1"
+            }
+        },
+        {
+            "label": {"text": "模式列表", "color": "gold"},
+            "tooltip": {"text": "查看已注册的游戏模式"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger show_modes set 1"
             }
         }
     ],

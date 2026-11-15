@@ -60,7 +60,7 @@ give @s minecraft:arrow[\
     item_name='{"text":"水晶箭","color":"aqua"}'\
 ] 1
 
-execute in kitbattle run tp @s 0 85 0
+execute in minecraft:kitbattle run tp @s 0 85 0
 
 tag @s add demolition_fighting
 

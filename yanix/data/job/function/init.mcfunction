@@ -11,3 +11,6 @@ function job:job/healer/init
 
 # 存活时长
 function job:survival_time/init
+
+# 附属数据包 API：职业初始化钩子
+function #job:affiliated/init

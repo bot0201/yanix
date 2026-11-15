@@ -138,7 +138,7 @@ give @s minecraft:firework_rocket\
         }\
     ] 64
 
-execute in kitbattle run tp @s 0 85 0
+execute in minecraft:kitbattle run tp @s 0 85 0
 
 # 清除职业标签，完成发放
 tag @s remove archer
