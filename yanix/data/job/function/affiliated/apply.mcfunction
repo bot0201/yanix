@@ -2,6 +2,6 @@
 clear @s
 $function $(kit)
 execute \
-    in kitbattle \
+    in minecraft:kitbattle \
     run tp @s 0 85 0
 $scoreboard players set @s $(objective) 0

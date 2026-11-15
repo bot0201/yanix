@@ -67,6 +67,6 @@ give @s minecraft:lingering_potion[\
     }\
 ] 3
 
-execute in kitbattle run tp @s 0 85 0
+execute in minecraft:kitbattle run tp @s 0 85 0
 
 tag @s remove healer

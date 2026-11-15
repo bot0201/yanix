@@ -58,7 +58,7 @@ give @s minecraft:golden_chestplate[\
 ]
 
 execute \
-    in kitbattle \
+    in minecraft:kitbattle \
     run tp @s 0 85 0
 
 tag @s add assassin_fighting

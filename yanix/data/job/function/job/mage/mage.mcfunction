@@ -148,6 +148,6 @@ give @s minecraft:milk_bucket 1
 
 give @s minecraft:golden_apple 8
 
-execute in kitbattle run tp @s 0 85 0
+execute in minecraft:kitbattle run tp @s 0 85 0
 
 tag @s remove mage
