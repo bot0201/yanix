@@ -22,3 +22,11 @@ execute \
 execute \
     if score @s show_modes matches 1.. \
     run scoreboard players set @s show_modes 0
+
+# 附属包列表
+execute \
+    if score @s show_packs matches 1.. \
+    run function main:affiliated/pack/show_menu
+execute \
+    if score @s show_packs matches 1.. \
+    run scoreboard players set @s show_packs 0

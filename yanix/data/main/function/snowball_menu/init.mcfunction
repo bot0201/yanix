@@ -4,3 +4,6 @@ scoreboard objectives add test_get_snowball trigger
 
 # 模式列表 trigger
 scoreboard objectives add show_modes trigger
+
+# 附属包列表 trigger
+scoreboard objectives add show_packs trigger
