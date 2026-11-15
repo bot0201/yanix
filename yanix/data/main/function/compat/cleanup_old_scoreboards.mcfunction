@@ -7,3 +7,6 @@ scoreboard objectives remove tmp
 
 # mining_adventure_money → money (da2badf8cf3ab1757ac8f6dadc467686ec8246d2: 模拟经营货币统一)
 scoreboard objectives remove mining_adventure_money
+
+# test_msg → 滚木 (ea0a0698aa43794706df97c86ac93f2f7168567f: 测试消息)
+scoreboard objectives remove test_msg
