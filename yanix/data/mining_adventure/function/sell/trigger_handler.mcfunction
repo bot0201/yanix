@@ -19,3 +19,6 @@ scoreboard players enable @a power_mining
 execute \
     as @a \
     run function mining_adventure:sell/trigger_handler_child
+
+# 附属数据包 API：建筑 tick 钩子
+function #mining_adventure:affiliated/tick

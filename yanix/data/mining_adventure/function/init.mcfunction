@@ -27,3 +27,6 @@ scoreboard objectives add power_mining trigger
 scoreboard objectives add electricity dummy
 
 # 计算用常量由 lib:const 统一生成（0..1000），此处无需重复设置
+
+# 附属数据包 API：建筑初始化钩子
+function #mining_adventure:affiliated/init
