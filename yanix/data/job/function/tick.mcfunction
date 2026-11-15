@@ -29,6 +29,9 @@ function job:trigger/enable_trigger
 # 处理职业trigger
 function job:trigger/trigger_handler
 
+# 附属数据包 API：职业 tick 钩子
+function #job:affiliated/tick
+
 # 处理职业cd
 function job:cd/cd_handler
 
