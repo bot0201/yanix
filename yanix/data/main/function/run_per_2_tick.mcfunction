@@ -24,6 +24,9 @@ function accessories:trigger_handler
 # 模拟经营卖矿 trigger 处理
 function mining_adventure:sell/trigger_handler
 
+# 模拟经营 - 建筑附属 tick 钩子
+function #mining_adventure:affiliated/tick
+
 # 空岛生存
 function skyblock:tick
 function skyblock:mode/dialog

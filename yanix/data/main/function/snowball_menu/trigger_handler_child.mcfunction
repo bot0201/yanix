@@ -18,15 +18,9 @@ execute \
 # 模式列表
 execute \
     if score @s show_modes matches 1.. \
-    run function main:affiliated/mode/show_menu
-execute \
-    if score @s show_modes matches 1.. \
-    run scoreboard players set @s show_modes 0
+    run function main:snowball_menu/show_modes_handler
 
 # 附属包列表
 execute \
     if score @s show_packs matches 1.. \
-    run function main:affiliated/pack/show_menu
-execute \
-    if score @s show_packs matches 1.. \
-    run scoreboard players set @s show_packs 0
+    run function main:snowball_menu/show_packs_handler

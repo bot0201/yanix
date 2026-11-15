@@ -3,29 +3,21 @@
 # 在附属包合并进 #main:affiliated/pack/menu 标签的函数中调用
 $execute \
     if score #$(id) pack_enabled matches 1 \
-    run tellraw @s [\
+    run function main:affiliated/pack/menu_entry_child \
         {\
-            "text":"  [$(name)]",\
-            "color":"aqua",\
-            "bold":true,\
-            "click_event":{\
-                "action":"run_command",\
-                "command":"/trigger trigger_pack_$(id) set 1"\
-            }\
-        },\
-        {"text":" 已启用（点击禁用）","color":"green","italic":true}\
-    ]
+            id:"$(id)",\
+            name:"$(name)",\
+            color:"aqua",\
+            status:"已启用（点击禁用）",\
+            status_color:"green"\
+        }
 $execute \
     unless score #$(id) pack_enabled matches 1 \
-    run tellraw @s [\
+    run function main:affiliated/pack/menu_entry_child \
         {\
-            "text":"  [$(name)]",\
-            "color":"gray",\
-            "bold":true,\
-            "click_event":{\
-                "action":"run_command",\
-                "command":"/trigger trigger_pack_$(id) set 1"\
-            }\
-        },\
-        {"text":" 已禁用（点击启用）","color":"red","italic":true}\
-    ]
+            id:"$(id)",\
+            name:"$(name)",\
+            color:"gray",\
+            status:"已禁用（点击启用）",\
+            status_color:"red"\
+        }
