@@ -41,5 +41,8 @@ function mining_adventure:init
 function misc:init
 function skyblock:init
 
+# 附属包管理器：初始化计分板
+function main:affiliated/pack/init
+
 # 附属数据包 API：初始化钩子
 function #main:affiliated/init

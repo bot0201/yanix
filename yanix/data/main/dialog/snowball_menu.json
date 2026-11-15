@@ -40,6 +40,14 @@
                 "type": "minecraft:run_command",
                 "command": "trigger show_modes set 1"
             }
+        },
+        {
+            "label": {"text": "附属包", "color": "gold"},
+            "tooltip": {"text": "浏览/启用附属数据包"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger show_packs set 1"
+            }
         }
     ],
     "columns": 1

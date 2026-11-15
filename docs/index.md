@@ -4,7 +4,7 @@
 
 ## 简介
 
-yanix 通过**原版函数标签**的跨数据包合并机制，向外部数据包暴露多组生命周期钩子，并提供 4 套附属 API，均封装了项目通用的「注册 → enable → 检测 → 业务 → 重置」流程：
+yanix 通过**原版函数标签**的跨数据包合并机制，向外部数据包暴露多组生命周期钩子，并提供 5 套附属 API，均封装了项目通用的「注册 → enable → 检测 → 业务 → 重置」流程：
 
 | 附属 API | 命名空间 | 用途 |
 |---------|---------|------|
@@ -12,6 +12,7 @@ yanix 通过**原版函数标签**的跨数据包合并机制，向外部数据�
 | 职业战争 | `job` | 新增职业（发放 kit + 传送至 kitbattle） |
 | 模拟经营建筑 | `mining_adventure` | 新增可购买建筑 |
 | 模式 | `main` | 新增游戏模式 + 雪球菜单入口 |
+| 附属包管理器 | `main` | 可切换启用的附属包 + 雪球菜单入口 |
 
 附属包作者只需编写自己的函数，并将自己的函数路径写进对应的函数标签 JSON 中，即可在不触碰 yanix 源码的前提下接入。
 
@@ -319,3 +320,87 @@ function main:affiliated/mode/menu_entry {objective:"sky_island_join", name:"空
 ```
 
 玩家在雪球菜单点「模式列表」→ 点「空岛」即可进入。
+
+## 附属包管理器 API（`main` 命名空间）
+
+为「需要被启用/禁用」的附属包提供统一的软开关 + 游戏内 GUI。附属包作者注册一个包，玩家在雪球菜单点「附属包」即可浏览并切换其启用状态。
+
+> 与模式/职业/建筑 API 的区别：那些 API「注册即生效」；本 API 管理「默认禁用、按需启用」的包。启用状态存于 `pack_enabled` 计分板（`#<id>` 虚拟玩家，1=启用 / 0=禁用）。
+
+### 生命周期钩子
+
+复用全局钩子：注册用 `#main:affiliated/init`，处理用 `#main:affiliated/tick_2`。
+
+### 1. 注册 `main:affiliated/pack/register`
+
+在 `init` 钩子中调用，创建 `trigger` 计分板并将包标记为默认禁用。
+
+```mcfunction
+function main:affiliated/pack/register {id:"foo"}
+```
+
+参数：
+
+- `id`：包的唯一标识（用于计分板虚拟玩家 `#<id>` 与 trigger 名）
+
+### 2. 处理 `main:affiliated/pack/handle`
+
+在 tick 钩子中调用，负责 `enable @a`、检测切换 trigger、翻转启用状态并提示。
+
+```mcfunction
+function main:affiliated/pack/handle {id:"foo", name:"示例包"}
+```
+
+参数：
+
+- `id`：与注册时相同
+- `name`：切换提示中显示的包名
+
+### 3. 门控业务逻辑
+
+**约定**：`handle` 必须无条件调用（否则包被禁用后无法重新启用）；真正的业务逻辑用 `if score #<id> pack_enabled matches 1` 门控：
+
+```mcfunction
+# your_pack:tick（已写入 #main:affiliated/tick_2 标签）
+function main:affiliated/pack/handle {id:"foo", name:"示例包"}
+execute if score #foo pack_enabled matches 1 run function your_pack:logic
+```
+
+### 4. 菜单入口 `main:affiliated/pack/menu_entry`
+
+在合并进 `#main:affiliated/pack/menu` 标签的函数中调用，显示包名与当前状态（点击切换）：
+
+```mcfunction
+function main:affiliated/pack/menu_entry {id:"foo", name:"示例包"}
+```
+
+参数：
+
+- `id`：与注册时相同
+- `name`：菜单中显示的包名
+
+### 完整示例：可切换的「示例包」
+
+1. `init` 钩子注册：
+
+```mcfunction
+# your_pack:init（已写入 #main:affiliated/init 标签）
+function main:affiliated/pack/register {id:"foo"}
+```
+
+2. `tick_2` 钩子处理 + 门控：
+
+```mcfunction
+# your_pack:tick（已写入 #main:affiliated/tick_2 标签）
+function main:affiliated/pack/handle {id:"foo", name:"示例包"}
+execute if score #foo pack_enabled matches 1 run function your_pack:logic
+```
+
+3. 菜单入口（合并进 `#main:affiliated/pack/menu` 标签）：
+
+```mcfunction
+# your_pack:pack_menu（已写入 #main:affiliated/pack/menu 标签）
+function main:affiliated/pack/menu_entry {id:"foo", name:"示例包"}
+```
+
+玩家在雪球菜单点「附属包」→ 点「示例包」即可切换启用/禁用。
