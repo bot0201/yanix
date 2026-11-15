@@ -6,4 +6,8 @@ $scoreboard players enable @a $(objective)
 $execute \
     as @a \
     if score @s $(objective) matches 1.. \
-    run function main:affiliated/trigger/handle_child {objective:"$(objective)", handler:"$(handler)"}
+    run function main:affiliated/trigger/handle_child \
+        {\
+            objective:"$(objective)",\
+            handler:"$(handler)"\
+        }
