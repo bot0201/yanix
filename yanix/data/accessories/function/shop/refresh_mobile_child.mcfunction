@@ -30,7 +30,7 @@ execute \
     run function qm:chest/drop_slot_entity {slot:11}
 item replace entity @s container.11 with \
     minecraft:glass[\
-        minecraft:custom_data={menu:1,shop:"accessories",buy:"astronaut_helmet"},\
+        minecraft:custom_data={menu:"accessories",buy:"astronaut_helmet"},\
         minecraft:item_name='{"text":"宇航员头盔","color":"aqua","italic":false}',\
         minecraft:lore=[\
             '{"text":"价格: 3 绿宝石","color":"gold","italic":false}',\
@@ -45,7 +45,7 @@ execute \
     run function qm:chest/drop_slot_entity {slot:13}
 item replace entity @s container.13 with \
     minecraft:lead[\
-        minecraft:custom_data={menu:1,shop:"accessories",buy:"mysterious_goggles"},\
+        minecraft:custom_data={menu:"accessories",buy:"mysterious_goggles"},\
         minecraft:item_name='{"text":"神秘眼镜","color":"dark_purple","italic":false}',\
         minecraft:lore=[\
             '{"text":"价格: 3 绿宝石","color":"gold","italic":false}',\
@@ -75,7 +75,7 @@ execute \
     run function qm:chest/drop_slot_entity {slot:22}
 item replace entity @s container.22 with \
     minecraft:writable_book[\
-        minecraft:custom_data={menu:1,shop:"accessories",buy:"dialog"},\
+        minecraft:custom_data={menu:"accessories",buy:"dialog"},\
         minecraft:item_name='{"text":"对话式购买","color":"green","italic":false}',\
         minecraft:lore=[\
             '{"text":"点击以使用 tellraw 对话","color":"gray","italic":false}',\
