@@ -37,6 +37,7 @@ function job:init
 function main:init
 function main:snowball_menu/init
 function accessories:init
+function qm:init
 function mining_adventure:init
 function misc:init
 function skyblock:init

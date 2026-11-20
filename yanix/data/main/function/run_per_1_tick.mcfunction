@@ -16,5 +16,8 @@ execute \
 # 模拟经营 - 电力系统
 function mining_adventure:power/tick
 
+# 快捷菜单（qm）- 手持 qm 时钟召唤/回收箱子菜单
+function qm:tick
+
 # 附属数据包 API：每 tick 钩子
 function #main:affiliated/tick_1

@@ -34,6 +34,14 @@
             }
         },
         {
+            "label": {"text": "获取快捷菜单", "color": "aqua"},
+            "tooltip": {"text": "获取一个快捷菜单时钟"},
+            "action": {
+                "type": "minecraft:run_command",
+                "command": "trigger qm_menu set 1"
+            }
+        },
+        {
             "label": {"text": "模式列表", "color": "gold"},
             "tooltip": {"text": "查看已注册的游戏模式"},
             "action": {
