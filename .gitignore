@@ -10,4 +10,4 @@ desktop.ini
 *.tmp
 
 # 工具
-auto_commit.bat
+auto_commit.ps1
