@@ -33,7 +33,7 @@ execute \
     if items block -9 69 -9 container.11 * \
     unless items block -9 69 -9 container.11 *[custom_data~{menu:1}] \
     positioned -9 69 -9 \
-    run function sbm:chest/drop_slot {slot:11}
+    run function qm:chest/drop_slot {slot:11}
 item replace block -9 69 -9 container.11 with \
     minecraft:glass[\
         minecraft:custom_data={menu:1,shop:"accessories",buy:"astronaut_helmet"},\
@@ -49,7 +49,7 @@ execute \
     if items block -9 69 -9 container.13 * \
     unless items block -9 69 -9 container.13 *[custom_data~{menu:1}] \
     positioned -9 69 -9 \
-    run function sbm:chest/drop_slot {slot:13}
+    run function qm:chest/drop_slot {slot:13}
 item replace block -9 69 -9 container.13 with \
     minecraft:lead[\
         minecraft:custom_data={menu:1,shop:"accessories",buy:"mysterious_goggles"},\
@@ -65,7 +65,7 @@ execute \
     if items block -9 69 -9 container.15 * \
     unless items block -9 69 -9 container.15 *[custom_data~{menu:1}] \
     positioned -9 69 -9 \
-    run function sbm:chest/drop_slot {slot:15}
+    run function qm:chest/drop_slot {slot:15}
 item replace block -9 69 -9 container.15 with \
     minecraft:light_gray_stained_glass_pane[\
         minecraft:custom_data={menu:1,ui:1},\
@@ -81,7 +81,7 @@ execute \
     if items block -9 69 -9 container.22 * \
     unless items block -9 69 -9 container.22 *[custom_data~{menu:1}] \
     positioned -9 69 -9 \
-    run function sbm:chest/drop_slot {slot:22}
+    run function qm:chest/drop_slot {slot:22}
 item replace block -9 69 -9 container.22 with \
     minecraft:writable_book[\
         minecraft:custom_data={menu:1,shop:"accessories",buy:"dialog"},\
@@ -97,7 +97,7 @@ execute \
     if items block -9 69 -9 container.26 * \
     unless items block -9 69 -9 container.26 *[custom_data~{menu:1}] \
     positioned -9 69 -9 \
-    run function sbm:chest/drop_slot {slot:26}
+    run function qm:chest/drop_slot {slot:26}
 item replace block -9 69 -9 container.26 with \
     minecraft:barrier[\
         minecraft:custom_data={menu:1,ui:1},\
