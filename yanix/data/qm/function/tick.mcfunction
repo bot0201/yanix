@@ -7,7 +7,7 @@
 tag @a remove qm_holder
 execute \
     as @a \
-    if items entity @s weapon.* clock[custom_data={"qm":1}] \
+    if items entity @s weapon.* clock[custom_data~{qm:1}] \
     run tag @s add qm_holder
 
 # 手持 qm 时钟且附近无 qm 箱子时，在眼前召唤箱子矿车
