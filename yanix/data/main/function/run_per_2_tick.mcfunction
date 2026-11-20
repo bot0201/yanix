@@ -21,6 +21,12 @@ execute \
 # 饰品 trigger 处理
 function accessories:trigger_handler
 
+# 饰品商店箱子菜单物品拿取检测
+function accessories:shop/take_detect
+
+# 快捷菜单 trigger 处理
+function qm:trigger_handler
+
 # 模拟经营卖矿 trigger 处理
 function mining_adventure:sell/trigger_handler
 

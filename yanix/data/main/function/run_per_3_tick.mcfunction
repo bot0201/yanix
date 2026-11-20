@@ -9,6 +9,9 @@ execute \
     if entity @a[distance=..16] \
     run function qm:tick_3
 
+# 移动箱子菜单 (qm 箱子矿车) 刷新
+function accessories:shop/refresh_mobile
+
 # 成就授予（仅首次执行）
 execute \
     unless score #advancement_granted db matches 1 \
