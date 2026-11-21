@@ -76,9 +76,9 @@ execute \
 item replace entity @s container.22 with \
     minecraft:writable_book[\
         minecraft:custom_data={menu:"accessories",buy:"dialog"},\
-        minecraft:item_name='{"text":"对话式购买","color":"green","italic":false}',\
+        minecraft:item_name='{"text":"GUI购买","color":"green","italic":false}',\
         minecraft:lore=[\
-            '{"text":"点击以使用 tellraw 对话","color":"gray","italic":false}',\
+            '{"text":"点击以使用 tellraw GUI","color":"gray","italic":false}',\
             '{"text":"无需跑到箱子前","color":"gray","italic":false}'\
         ]\
     ]
