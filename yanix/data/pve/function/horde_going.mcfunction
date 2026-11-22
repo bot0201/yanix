@@ -9,4 +9,4 @@ execute \
     run scoreboard players set #target db 25
 execute \
     unless score #pve horde >= #target db \
-    run scoreboard players add #pve horde 1
+    run function pve:horde_going_child

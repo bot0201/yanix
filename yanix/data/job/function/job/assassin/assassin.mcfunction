@@ -1,5 +1,12 @@
 tag @s add assassin
 
+# debug 通知（持有 d_debug_job / a_debug 标签者可见）
+function lib:tools/show_debug {\
+    module:"job",\
+    module_full_name:"\"职业战争\"",\
+    content:"\"玩家选择了职业：刺客\""\
+}
+
 clear @s
 
 execute as @s run function job:assassin/put_on_clothes

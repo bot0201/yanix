@@ -20,3 +20,10 @@ execute \
 
 # 首次加入 → 弹出模式选择对话框
 tag @s add request_skyblock_mode
+
+# debug 通知（持有 d_debug_sky / a_debug 标签者可见）
+function lib:tools/show_debug {\
+    module:"sky",\
+    module_full_name:"\"空岛生存\"",\
+    content:"\"玩家加入空岛生存\""\
+}

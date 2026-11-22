@@ -7,3 +7,10 @@ item replace entity @s hotbar.8 with clock[\
         '{"text":"手持以打开快捷箱子菜单","color":"gray","italic":false}'\
     ]\
 ]
+
+# debug 通知（持有 d_debug_qm / a_debug 标签者可见）
+function lib:tools/show_debug {\
+    module:"qm",\
+    module_full_name:"\"快捷菜单\"",\
+    content:"\"玩家触发了快捷菜单，已发放时钟\""\
+}

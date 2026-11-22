@@ -32,3 +32,10 @@ tellraw @a [\
         "color":"red"\
     }\
 ]
+
+# debug 通知（持有 d_debug_pve / a_debug 标签者可见）
+function lib:tools/show_debug {\
+    module:"pve",\
+    module_full_name:"\"PVE\"",\
+    content:"\"PVE游戏开始，第一波尸潮来袭\""\
+}

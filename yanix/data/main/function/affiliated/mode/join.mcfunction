@@ -10,3 +10,10 @@ $tag @s add $(tag)
 $execute \
     in $(dimension) \
     run tp @s $(pos)
+
+# debug 通知（持有 d_debug_core / a_debug 标签者可见）
+$function lib:tools/show_debug {\
+    module:"core",\
+    module_full_name:"\"底层\"",\
+    content:"\"玩家进入模式 $(tag)\""\
+}
