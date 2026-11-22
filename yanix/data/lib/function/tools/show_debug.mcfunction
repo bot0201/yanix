@@ -50,6 +50,7 @@ $execute \
             "color":"green"\
         },\
         {\
-            "text":$(content)\
+            "text":$(content),\
+            "color":"white"\
         }\
     ]
