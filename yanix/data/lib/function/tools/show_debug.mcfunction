@@ -3,7 +3,6 @@
 # module:模块缩写
 # module_full_name:模块全写
 # content:需要展示的debug信息
-# color:展示的debug信息的颜色
 # ...你甚至能够sql注入攻击(？)来实现一行内多颜色或一function实现多行
 # 以下为玩梗时间！(依旧百万英镑)
 # 一function实现多行：这样会很屎山，先生。
@@ -28,7 +27,7 @@ $execute \
         },\
         {\
             "text":$(content),\
-            "color":$(color)\
+            "color":"white"\
         }\
     ]
 
@@ -51,7 +50,6 @@ $execute \
             "color":"green"\
         },\
         {\
-            "text":$(content),\
-            "color":$(color)\
+            "text":$(content)\
         }\
     ]
