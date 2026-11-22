@@ -9,11 +9,4 @@ execute \
     run scoreboard players set #target db 25
 execute \
     unless score #pve horde >= #target db \
-    run function lib:tools/show_debug {\
-        module:"pve",\
-        module_full_name:"\"PVE\"",\
-        content:"\"尸潮波次推进\""\
-    }
-execute \
-    unless score #pve horde >= #target db \
-    run scoreboard players add #pve horde 1
+    run function pve:horde_going_child
