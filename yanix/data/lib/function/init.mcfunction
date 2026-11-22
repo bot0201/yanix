@@ -4,4 +4,3 @@ scoreboard objectives add lib_fx_cuboid_steps dummy
 
 function lib:fast_func/soft_ban/init
 function lib:const/init
-function lib:tools/debug/init
