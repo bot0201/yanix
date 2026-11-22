@@ -1,11 +1,11 @@
 $execute \
     if items block -9 69 -9 container.$(slot) * \
-    unless items block -9 69 -9 container.$(slot) *[custom_data~{menu:1}] \
+    unless items block -9 69 -9 container.$(slot) *[custom_data~{menu:"accessories"}] \
     positioned -9 69 -9 \
     run function qm:chest/drop_slot {slot:$(slot)}
 $item replace block -9 69 -9 container.$(slot) with minecraft:light_gray_stained_glass_pane[\
     minecraft:custom_data={\
-        menu:1,\
+        menu:"accessories",\
         ui:1\
     },\
     minecraft:item_name="背景板",\

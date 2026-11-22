@@ -8,3 +8,6 @@ desktop.ini
 
 # 临时文件
 *.tmp
+
+# 工具
+auto_commit.ps1

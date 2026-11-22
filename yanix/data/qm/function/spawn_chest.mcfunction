@@ -2,7 +2,6 @@
 execute \
     as @a \
     at @s \
-    if items entity @s weapon.* clock[custom_data={"qm":1}] \
+    if items entity @s weapon.* clock[custom_data~{qm:1}] \
     unless entity @e[type=chest_minecart,tag=qm,limit=1,distance=..6] \
-    anchored eyes \
-    run summon chest_minecart ^ ^ ^ {Tags:["qm"]}
+    run function qm:spawn_chest_child
