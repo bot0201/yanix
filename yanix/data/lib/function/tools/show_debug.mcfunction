@@ -9,30 +9,7 @@
 # 一function实现多行：这样会很屎山，先生。
 # 你：是的，我知道
 
-# 先处理单独的
-$execute \
-    as @a \
-    if entity @s[tag=d_debug_$(module)] \
-    run tellraw @s [\
-        {\
-            "text": "[",\
-            "color": "green"\
-        },\
-        {\
-            "text":$(module_full_name),\
-            "color":"green"\
-        },\
-        {\
-            "text": "]",\
-            "color":"green"\
-        },\
-        {\
-            "text":$(content),\
-            "color":$(color)\
-        }\
-    ]
-
-# 接下来单独处理接收全部信息的人
+# 先单独处理接收全部信息的人
 $execute \
     as @a \
     if entity @s[tag=a_debug] \
@@ -47,6 +24,33 @@ $execute \
         },\
         {\
             "text":"]",\
+            "color":"green"\
+        },\
+        {\
+            "text":$(content),\
+            "color":$(color)\
+        }\
+    ]
+    execute \
+        as @a \
+        if entity @s[tag=a_debug] \
+        run return 0
+
+# 接下来处理单独的
+$execute \
+    as @a \
+    if entity @s[tag=d_debug_$(module)] \
+    run tellraw @s [\
+        {\
+            "text": "[",\
+            "color": "green"\
+        },\
+        {\
+            "text":$(module_full_name),\
+            "color":"green"\
+        },\
+        {\
+            "text": "]",\
             "color":"green"\
         },\
         {\
