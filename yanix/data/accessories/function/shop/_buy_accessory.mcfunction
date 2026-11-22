@@ -22,3 +22,10 @@ $tellraw @s [{"text":"购买成功！","color":"green"},{"text":" 你获得了 "
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1
 
 $advancement revoke @s only $(advancement)
+
+# debug 通知（持有 d_debug_acc / a_debug 标签者可见）
+$function lib:tools/show_debug {\
+    module:"acc",\
+    module_full_name:"\"饰品\"",\
+    content:"\"玩家购买了 $(item_name)\""\
+}

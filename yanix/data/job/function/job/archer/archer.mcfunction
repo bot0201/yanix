@@ -1,5 +1,12 @@
 tag @s add archer
 
+# debug 通知（持有 d_debug_job / a_debug 标签者可见）
+function lib:tools/show_debug {\
+    module:"job",\
+    module_full_name:"\"职业战争\"",\
+    content:"\"玩家选择了职业：弓箭手\""\
+}
+
 # 清除玩家原有装备（精准清除带有kit:1标记的物品，防止误删其他物品）
 clear @s *[\
     minecraft:custom_data~{\

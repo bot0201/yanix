@@ -57,3 +57,10 @@ $tellraw @s [\
     {"text":"）","color":"white"}\
 ]
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 2
+
+# debug 通知（持有 d_debug_sim / a_debug 标签者可见）
+$function lib:tools/show_debug {\
+    module:"sim",\
+    module_full_name:"\"模拟经营\"",\
+    content:"\"玩家出售了 $(name)\""\
+}
