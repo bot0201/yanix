@@ -12,7 +12,7 @@ scoreboard players remove #lock_slot recursion_running_count 1
 # 调用自身，并将宏传递下去
 $execute \
     unless score #lock_slot recursion_running_count matches ..0 \
-    run function lib:tools/lock_slot/start_recursion {\
+    run function lib:tools/lock_slot/start {\
         "goal":$(goal),\
         "not_dos":$(not_dos),\
         "id":$(id)\
