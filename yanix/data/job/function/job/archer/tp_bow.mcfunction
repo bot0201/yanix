@@ -7,7 +7,7 @@ execute \
         }\
     ] \
     anchored eyes \
-    run function job:archer/tp_bow_marker_child
+    run function job:job/archer/tp_bow_marker_child
 scoreboard players reset @a[\
         scores={\
             used_bow=1..\
@@ -46,7 +46,7 @@ execute \
         distance=..1.5,\
         tag=tp_arrow\
     ] \
-    run function job:archer/tp_bow_tp_child
+    run function job:job/archer/tp_bow_tp_child
 execute \
     as @e[\
         type=marker,tag=tp\

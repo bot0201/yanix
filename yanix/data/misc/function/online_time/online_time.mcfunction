@@ -1,3 +1,3 @@
 execute \
     as @a \
-    run function main:online_time/tick_child
+    run function misc:online_time/tick_child
