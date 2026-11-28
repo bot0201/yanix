@@ -23,6 +23,7 @@ PACKS = (ROOT / "yanix", ROOT / "yanix_resourcepack")
 # function 命令引用：# 前缀表示函数标签，否则为函数
 # 路径组放宽到非空白字符，以便识别宏变量 $(...) 后再跳过动态路径
 FUNCTION_REF = re.compile(r"function\s+(#?)([a-z0-9_.\-]+):([^\s\\{]+)")
+SCHEDULE_REF = re.compile(r"schedule\s+function\s+([a-z0-9_.\-]+):([^\s]+)")
 
 # 视为外部（原版）提供的命名空间，跳过存在性检查
 EXTERNAL_NAMESPACES = {"minecraft"}
@@ -86,6 +87,22 @@ def check_function_refs() -> None:
                     )
 
 
+def check_schedule_refs() -> None:
+    for path in sorted(DATA.rglob("*.mcfunction")):
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            if line.lstrip().startswith("#"):
+                continue  # 整行注释
+            for m in SCHEDULE_REF.finditer(line):
+                namespace, ref_path = m.group(1), m.group(2)
+                if namespace in EXTERNAL_NAMESPACES:
+                    continue
+                if resolve_function(namespace, ref_path) is None:
+                    error(
+                        f"[调度] {rel(path)}:{lineno} schedule 了不存在的函数 "
+                        f"{namespace}:{ref_path}"
+                    )
+
+
 def is_function_tag(path: Path) -> bool:
     parts = path.relative_to(DATA).parts
     return len(parts) >= 4 and parts[1] == "tags" and parts[2] == "function"
@@ -104,6 +121,8 @@ def check_function_tag_values() -> None:
             continue
         for value in values:
             if isinstance(value, dict):
+                if value.get("required") is False:
+                    continue  # required: false，函数缺失时原版不报错
                 value = value.get("function")  # 1.21.3+ 的 {"function": "...", "required": false}
             if not isinstance(value, str) or ":" not in value:
                 continue
@@ -126,6 +145,7 @@ def main() -> int:
     check_json_validity()
     check_function_refs()
     check_function_tag_values()
+    check_schedule_refs()
 
     if errors:
         print(f"发现 {len(errors)} 个问题：", file=sys.stderr)
