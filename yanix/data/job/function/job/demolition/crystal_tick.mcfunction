@@ -59,4 +59,4 @@ execute \
         }\
     ] \
     at @s \
-    run function job:demolition/crystal_explode_child
+    run function job:job/demolition/crystal_explode_child

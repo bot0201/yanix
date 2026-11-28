@@ -9,14 +9,14 @@ execute \
                 assassin:1\
             }\
         ] \
-    run function job:assassin/skill_invis_on_tag_child
+    run function job:job/assassin/skill_invis_on_tag_child
 
 execute \
     as @a[\
         tag=assassin_fighting,\
         tag=invisible\
     ] \
-    run function job:assassin/skill_invis_on_clothes_child
+    run function job:job/assassin/skill_invis_on_clothes_child
 
 execute \
     as @a[\
@@ -29,7 +29,7 @@ execute \
                 assassin:1\
             }\
         ] \
-    run function job:assassin/skill_invis_off_tag_child
+    run function job:job/assassin/skill_invis_off_tag_child
 
 execute \
     as @a[\
@@ -37,6 +37,6 @@ execute \
         tag=no_invisible\
     ] \
     if items entity @s armor.head air \
-    run function job:assassin/put_on_clothes
+    run function job:job/assassin/put_on_clothes
 
 effect give @a[tag=invisible] minecraft:invisibility 1 1 false

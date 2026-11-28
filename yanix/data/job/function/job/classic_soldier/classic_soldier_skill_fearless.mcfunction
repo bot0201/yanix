@@ -100,4 +100,4 @@ execute \
                 skill_fearless:1\
             }\
         ] \
-    run function job:classic_soldier/classic_soldier_skill_handler_triggered_child
+    run function job:job/classic_soldier/classic_soldier_skill_handler_triggered_child

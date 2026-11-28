@@ -2,7 +2,7 @@ tag @s add assassin
 
 clear @s
 
-execute as @s run function job:assassin/put_on_clothes
+execute as @s run function job:job/assassin/put_on_clothes
 
 give @s minecraft:diamond_axe[\
     minecraft:enchantments={\
